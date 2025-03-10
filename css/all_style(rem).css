@@ -1737,7 +1737,7 @@ margin-left: 0.3125rem;
    }
    .info__mobile {
         font-size: 0.625rem;
-    top: 0rem;
+    top: -0.5rem;
    }
     .dmca-info .info-text p {
     font-size: 0.5625rem;
@@ -1846,7 +1846,7 @@ margin-left: 0.3125rem;
   }
   .info__mobile {
     font-size: 0.75rem;
-    top: 1.25rem;
+    top: -0.5rem;
   }
   .dmca-info .info-text p {
     font-size: 0.75rem;
@@ -1953,7 +1953,7 @@ margin-left: 0.3125rem;
   .info__mobile {
     font-size: 0.875rem;
     /*top: 0.625rem;*/
-    top: 0.125rem;
+    top: -0.5rem;
   }
   .dmca-info .info-text p {
     font-size: 1rem;
@@ -2059,7 +2059,7 @@ margin-left: 0.3125rem;
   }
   .info__mobile {
     font-size: 0.875rem;
-    top: -2.8125rem;
+    top: -0.5rem;
   }
   .dmca-info .info-text p {
     font-size: 1rem;
@@ -2171,7 +2171,7 @@ margin-left: 0.3125rem;
   }
   .info__mobile {
     font-size: 1rem;
-    top: 1.875rem;
+    top: -0.5rem;
   }
   .dmca-info .info-text p {
     font-size: 1.125rem;
@@ -2287,7 +2287,7 @@ margin-left: 0.3125rem;
   }
   .info__mobile {
     font-size: 1.5rem;
-    top: 0.625rem;
+    top: -0.5rem;
   }
   .dmca-info .info-text p {
     font-size: 1.625rem;
@@ -2410,7 +2410,7 @@ margin-left: 0.3125rem;
   }
   .info__mobile {
     font-size: 1.75rem;
-    top: 1.875rem;
+    top: -0.5rem;
   }
   .dmca-info .info-text p {
     font-size: 2.125rem;
