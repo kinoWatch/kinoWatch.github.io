@@ -167,12 +167,12 @@ display: none;
 }
 
 .icon {
-    margin: 0.625rem 0; /* Отступы между иконками */
+    margin: 0.325rem 0; /* Отступы между иконками */
 }
 
 .icon img {
-    width: 2.5rem; /* Ширина иконки */
-    height: 2.5rem; /* Высота иконки */
+    width: 1.7rem;  Ширина иконки 
+    height: 1.7rem; /* Высота иконки */
     transition: transform 0.2s; /* Плавное масштабирование */
 }
 
