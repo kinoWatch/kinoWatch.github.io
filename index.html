@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <title>KinoWatch</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="android-chrome" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
+    <link rel="android-chrome" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link href="https://fonts.cdnfonts.com/css/days-one" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/all_style.css"> -->
+    <link rel="stylesheet" href="css/all_style(rem).css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> -->
+  </head>
+  <body>
+    <!-- <div class="video-container">
+    <video autoplay muted loop>
+      <source src="img/video.mp4" type="video/mp4">
+    </video>
+    <div class="overlayVideo"></div>
+  </div> -->
+    <div id="overlay"></div>
+    <div class="header">
+        <div class="logo"><a href="file:///D:/Freelance/web/2023/slick/1.html"><img src="img/logo.webp" alt="logo"></a></div>
+      </div>
+    <!-- <div class="firstLoader" id="firstLoader">
+      <div class="loading"> <p>l</p><p>o</p><p>a</p><p>d</p><p>i</p><p>n</p><p>g</p></div>
+    </div> -->
+    <div class="firstLoader" id="firstLoader">
+    <div class="big-logo">
+        <img src="img/big_logo_11zon.webp" alt="">
+    </div>
+        <p class="notify">Подгружаем новинки</p>
+</div>
+    <div class="mobile-social_icons">
+        <div id="icon-1" class="icon">
+          <a href="https://www.tiktok.com/@kinowatch_001?lang=ru-RU" target="_blank">
+            <img src="img/social_ico/tiktok.ico" alt="ТикТок">
+          </a>
+        </div>
+        <div id="icon-2" class="icon">
+          <a href="https://vk.com/kinowatch_bot" target="_blank">
+            <img src="img/social_ico/vk.ico" alt="Вконтакте">
+          </a>
+        </div>
+        <div id="icon-3" class="icon">
+          <a href="https://ok.ru/group/58259070976148" target="_blank">
+            <img src="img/social_ico/ok.ico" alt="Одноклассники">
+          </a>
+        </div>
+        <div id="icon-4" class="icon">
+          <a href="https://www.instagram.com/kinowatch_001/" target="_blank">
+            <img src="img/social_ico/insta.ico" alt="Инстаграм">
+          </a>
+        </div>
+        <div id="icon-5" class="icon">
+          <a href="https://www.youtube.com/@kinowatch_001/featured" target="_blank">
+            <img src="img/social_ico/yt.ico" alt="YouTube">
+          </a>
+        </div>
+        <div id="icon-6" class="icon">
+          <a href="https://t.me/SearchWatch_bot" target="_blank">
+            <img src="img/social_ico/tg.ico" alt="Телеграм">
+          </a>
+        </div>
+      </div>
+      <div id="ppb-1" class="ppb-1">
+        <a href="https://www.tiktok.com/@kinowatch_001?lang=ru-RU" target="_blank"><img src="img/banners/tt_970x50.png" style="position: inherit;width: 100%;height: auto;" alt="ТикТок"></a>
+        </div>
+
+    <div class="mobile-menu">
+      <button class="menu-item" id="home-toggle">
+    <i class="fas fa-home"></i>
+    <span>Главная</span>
+      </button>
+      <button class="menu-item" id="search-toggle">
+    <i class="fas fa-search"></i>
+    <span>Поиск</span>
+      </button>
+      <button class="menu-item" id="collection-toggle">
+    <i class="fas fa-th"></i>
+    <span>Подборки</span>
+      </button>
+      <span id="social-menu-button" class="menu-item">
+    <i class="fab fa-telegram"></i>
+    <span>Соц. сети</span>
+  </span>
+  <span id="dmca-mobile-button" class="menu-item">
+    <i class="fas fa-info-circle"></i>
+    <span>DMCA</span>
+    </div>
+    <div class="content">
+      <div class="social_icons">
+        <div id="icon-1" class="icon">
+          <a href="https://www.tiktok.com/@kinowatch_001?lang=ru-RU" target="_blank">
+            <img src="img/social_ico/tiktok.ico" alt="ТикТок">
+          </a>
+        </div>
+        <div id="icon-2" class="icon">
+          <a href="https://vk.com/kinowatch_bot" target="_blank">
+            <img src="img/social_ico/vk.ico" alt="Вконтакте">
+          </a>
+        </div>
+        <div id="icon-3" class="icon">
+          <a href="https://ok.ru/group/58259070976148" target="_blank">
+            <img src="img/social_ico/ok.ico" alt="Одноклассники">
+          </a>
+        </div>
+        <div id="icon-4" class="icon">
+          <a href="https://www.instagram.com/kinowatch_001/" target="_blank">
+            <img src="img/social_ico/insta.ico" alt="Инстаграм">
+          </a>
+        </div>
+        <div id="icon-5" class="icon">
+          <a href="https://www.youtube.com/@kinowatch_001/featured" target="_blank">
+            <img src="img/social_ico/yt.ico" alt="YouTube">
+          </a>
+        </div>
+        <div id="icon-6" class="icon">
+          <a href="https://t.me/SearchWatch_bot" target="_blank">
+            <img src="img/social_ico/tg.ico" alt="Телеграм">
+          </a>
+        </div>
+      </div>
+      <div id="ppb-12" class="ppb-12"> <a href="https://vk.com/kinowatch_bot" target="_blank"><img src="img/banners/vk_300x460.png" alt="Вконтакте"></a> </div>
+      <div id="ppb-5" class="ppb-5"> <a href="https://www.tiktok.com/@kinowatch_001?lang=ru-RU" target="_blank"><img src="img/banners/tt_300x860.png" alt="ТикТок"></a> </div>
+      <div class="wrapper-slider">
+        <div class="menu">
+          <button id="btn-home">Главная</button>
+          <!-- <button id="btn-collections">Подборки</button> -->
+           <button id="btn-collections">
+   <span style="--i:1">П</span>
+   <span style="--i:2">о</span>
+   <span style="--i:3">д</span>
+   <span style="--i:4">б</span>
+   <span style="--i:5">о</span>
+   <span style="--i:6">р</span>
+   <span style="--i:7">к</span>
+   <span style="--i:8">и</span>
+  </button>
+  <button id="btn-genres">Жанры</button>
+
+          <!-- <button id="btn-collections" style="color: #ffad00;">Подборки</button> -->
+          <!-- <button id="btn-collections"> <p>П</p><p>О</p><p>Д</p><p>Б</p><p>О</p><p>Р</p><p>К</p><p>И</p></button> -->
+          <!-- <a href="file:///D:/Freelance/web/2023/slick/index.html" id="btn-home">Главная</a> -->
+          <!-- <a href="file:///D:/Freelance/web/2023/slick/all collections.html" id="btn-collections" style="color: #ffad00;">Подборки</a> -->
+        </div>
+
+        <div class="slider" id="slider"></div>
+          <div class="info__mobile">
+            <div class="title__mobile"><p></p></div>
+            <div class="year__mobile"><p></p></div>
+          </div>
+      <div class="pos_arrows"></div>
+      
+  </div>
+  <div class="search_form">
+        <form id="search-form">
+         <!--  <div class="wrapper-left">
+            <div id="ppb-2" class="ppb"> <a href="https://www.tiktok.com/@kinowatch_001?lang=ru-RU" target="_blank"><img class="ppb-1" src="img/banners/tt_500x200.png" style="position: inherit;width: 100%;height: auto;" alt="ТикТок"></a> </div>
+          </div> -->
+          <div class="wrapper-form">
+            <input type="text" id="search-input" placeholder="Введите название... (год, сезон, серию писать не нужно)">
+            <button type="submit" class="fas fa-search"></button>
+          </div>
+         <!--  <div class="wrapper-right">
+            <div id="ppb-3" class="ppb"> <a href="https://www.instagram.com/kinowatch_001/" target="_blank"><img class="ppb-2" src="img/banners/inst_500x200.png" style="position: inherit;width: 100%;height: auto;" alt="Инстаграм"></a> </div>
+          </div> -->
+        </form>
+      </div>
+      <div id="ppb-4" class="ppb-4"> <a href="https://www.tiktok.com/@kinowatch_001?lang=ru-RU" target="_blank"><img class="ppb-4" src="img/banners/tt_500x100.png" style="position: inherit;width: 100%;height: auto;" alt="ТикТок"></a> </div>
+      <div class="collection-name hidden">
+         <span><img src="img/movie.svg"><p class="name"></p></span>
+     </div>
+<div class="collect-name hidden">
+         <span><img src="img/movie.svg"><p class="name"></p></span>
+     </div>
+      <div class="nav-btn-back hidden">
+        <button id="btn-back" class="btn-back" style="cursor: pointer;"></button>
+      </div>
+      <div class="nav-btn-back-mobile hidden">
+        <button id="btn-back-mobile" class="btn-back-mobile" style="cursor: pointer;"></button>
+        <div class="name-mibile">
+         <span><img src="img/movie.svg"><p class="name"></p></span>
+     </div>
+      </div>
+      <!-- <div class="nav-btn-back-mobile hidden">
+        <button id="btn-back-mobile" class="btn-back-mobile"></button>
+        <div class="name-mibile">
+         <div class="collect-name visible">
+         <span><img src="img/movie.svg"><p class="name"</p></span>
+     </div>
+     </div>
+      </div> -->
+    <div id="search-results" class="search-results-container hidden"></div>
+    <div id="collections-results" class="collections-results-container hidden"></div>
+    <div id="genre-results" class="genre-results-container hidden"></div>
+    
+  <div class="top-content">
+  <div class="wrapper-slider_films">
+    <div class="slider_name_nav">
+      <span><img src="img/movie.svg"><p class="name">ТОП ФИЛЬМОВ</p></span>
+      <!-- <span><p class="name">ТОП ФИЛЬМОВ</p></span> -->
+      <span class="arrows_films"></span>
+    </div>
+  <div class="slider-films" id="slider-films"></div>
+      </div>
+
+      <div class="wrapper-slider_series">
+    <div class="slider_name_nav">
+      <span><img src="img/movie.svg"><p class="name">ТОП СЕРИАЛОВ</p></span>
+      <!-- <span><p class="name">ТОП СЕРИАЛОВ</p></span> -->
+      <span class="arrows_series"></span>
+    </div>
+  <div class="slider-series" id="slider-series"></div>
+  </div>
+
+<div class="wrapper-slider_cartoon">
+    <div class="slider_name_nav">
+      <span><img src="img/movie.svg"><p class="name">ТОП МУЛЬТФИЛЬМОВ</p></span>
+      <!-- <span><p class="name">МУЛЬТФИЛЬМОВ</p></span> -->
+      <span class="arrows_cartoon"></span>
+    </div>
+  <div class="slider-cartoon" id="slider-cartoon"></div>
+      </div>
+
+<div class="wrapper-slider_cartoon-series">
+    <div class="slider_name_nav">
+      <span><img src="img/movie.svg"><p class="name">ТОП МУЛЬТСЕРИАЛОВ</p></span>
+      <!-- <span><p class="name">ТОП МУЛЬТСЕРИАЛОВ</p></span> -->
+      <span class="arrows_cartoon-series"></span>
+    </div>
+  <div class="slider-cartoon-series" id="slider-cartoon-series"></div>
+  </div>
+
+  <div class="wrapper-slider_anime">
+    <div class="slider_name_nav">
+      <span><img src="img/movie.svg"><p class="name">ТОП АНИМЕ</p></span>
+      <!-- <span><p class="name">ТОП АНИМЕ</p></span> -->
+      <span class="arrows_anime"></span>
+    </div>
+  <div class="slider-anime" id="slider-anime"></div>
+  </div>
+
+  <div class="wrapper-slider_anime-tv-series">
+    <div class="slider_name_nav">
+      <span><img src="img/movie.svg"><p class="name">ТОП АНИМЕ-СЕРИАЛОВ</p></span>
+      <!-- <span><p class="name">ТОП АНИМЕ-СЕРИАЛОВ</p></span> -->
+      <span class="arrows_anime-tv-series"></span>
+    </div>
+  <div class="slider-anime-tv-series" id="slider-anime-tv-series"></div>
+  </div>
+
+  <div class="wrapper-slider_tv-show">
+    <div class="slider_name_nav">
+      <span><img src="img/movie.svg"><p class="name">ТОП ТВ-ШОУ</p></span>
+      <!-- <span><p class="name">ТОП ТВ-ШОУ</p></span> -->
+      <span class="arrows_tv-show"></span>
+    </div>
+  <div class="slider-tv-show" id="slider-tv-show"></div>
+  </div>
+</div>
+
+<div class="collections hidden">
+    <div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="азартные игры">
+        <img src="img/collections/pro azart.webp" alt="Про азартные игры" title="Про азартные игры">
+    </div>
+    <div class="collect-num"><span class="num">69</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="азартные игры">
+            <p>Про азартные игры</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="акул">
+        <img src="img/collections/pro shark.webp" alt="Про акул" title="Про акул">
+    </div>
+    <div class="collect-num"><span class="num">69</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="акул">
+            <p>Про акул</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="апокалипсис">
+        <img src="img/collections/pro apocalipsis.webp" alt="Про апокалипсис" title="Про апокалипсис">
+    </div>
+    <div class="collect-num"><span class="num">179</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="апокалипсис">
+            <p>Про апокалипсис</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="аферы">
+        <img src="img/collections/pro aferi.webp" alt="Про аферы / ограбления" title="Про аферы / ограбления">
+    </div>
+    <div class="collect-num"><span class="num">143</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="аферы">
+            <p>Про аферы / ограбления</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="драки">
+        <img src="img/collections/pro fight.webp" alt="Про боевые искусства" title="Про боевые искусства">
+    </div>
+    <div class="collect-num"><span class="num">283</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="драки">
+            <p>Про боевые искусства</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="вампиров">
+        <img src="img/collections/pro vampire.webp" alt="Про вампиров" title="Про вампиров">
+    </div>
+    <div class="collect-num"><span class="num">102</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="вампиров">
+            <p>Про вампиров</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="гангстеров">
+        <img src="img/collections/pro gangsta.webp" alt="Про гангстеров" title="Про гангстеров">
+    </div>
+    <div class="collect-num"><span class="num">182</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="гангстеров">
+            <p>Про гангстеров</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="гонки">
+        <img src="img/collections/pro racing.webp" alt="Про гонки" title="Про гонки">
+    </div>
+    <div class="collect-num"><span class="num">106</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="гонки">
+            <p>Про гонки</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="динозавров">
+        <img src="img/collections/pro dino.webp" alt="Про динозавров" title="Про динозавров">
+    </div>
+    <div class="collect-num"><span class="num">68</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="динозавров">
+            <p>Про динозавров</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="драконов">
+        <img src="img/collections/pro dragon.webp" alt="Про драконов" title="Про драконов">
+    </div>
+    <div class="collect-num"><span class="num">79</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="драконов">
+            <p>Про драконов</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="животных">
+        <img src="img/collections/pro animals.webp" alt="Про животных" title="Про животных">
+    </div>
+    <div class="collect-num"><span class="num">203</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="животных">
+            <p>Про животных</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="змей">
+        <img src="img/collections/pro snake.webp" alt="Про змей" title="Про змей">
+    </div>
+    <div class="collect-num"><span class="num">32</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="змей">
+            <p>Про змей</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="зомби">
+        <img src="img/collections/pro zombie.webp" alt="Про зомби" title="Про зомби">
+    </div>
+    <div class="collect-num"><span class="num">158</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="зомби">
+            <p>Про зомби</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="катастрофы">
+        <img src="img/collections/pro katastrofi.webp" alt="Про катастрофы" title="Про катастрофы">
+    </div>
+    <div class="collect-num"><span class="num">105</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="катастрофы">
+            <p>Про катастрофы</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="киллеров">
+        <img src="img/collections/pro Killer.webp" alt="Про киллеров" title="Про киллеров">
+    </div>
+    <div class="collect-num"><span class="num">102</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="киллеров">
+            <p>Про киллеров</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="космос">
+        <img src="img/collections/pro space.webp" alt="Про космос" title="Про космос">
+    </div>
+    <div class="collect-num"><span class="num">128</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="космос">
+            <p>Про космос</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="маньяков">
+        <img src="img/collections/pro maniakov.webp" alt="Про маньяков" title="Про маньяков">
+    </div>
+    <div class="collect-num"><span class="num">228</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="маньяков">
+            <p>Про маньяков</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="оборотней">
+        <img src="img/collections/pro oborotnei.webp" alt="Про оборотней" title="Про оборотней">
+    </div>
+    <div class="collect-num"><span class="num">45</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="оборотней">
+            <p>Про оборотней</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="призраков">
+        <img src="img/collections/pro prizrakov.webp" alt="Про призраков" title="Про призраков">
+    </div>
+    <div class="collect-num"><span class="num">112</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="призраков">
+            <p>Про призраков</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="инопланетян">
+        <img src="img/collections/pro prishelcev.webp" alt="Про пришельцев" title="Про пришельцев">
+    </div>
+    <div class="collect-num"><span class="num">93</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="инопланетян">
+            <p>Про пришельцев</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="психологические">
+        <img src="img/collections/pro psiho.webp" alt="Психологические" title="Психологические">
+    </div>
+    <div class="collect-num"><span class="num">111</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="психологические">
+            <p>Психологические</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="роботов">
+        <img src="img/collections/pro robots.webp" alt="Про роботов" title="Про роботов">
+    </div>
+    <div class="collect-num"><span class="num">109</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="роботов">
+            <p>Про роботов</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="снайперов">
+        <img src="img/collections/pro sniper.webp" alt="Про снайперов" title="Про снайперов">
+    </div>
+    <div class="collect-num"><span class="num">57</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="снайперов">
+            <p>Про снайперов</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="тюрьму">
+        <img src="img/collections/pro prison.webp" alt="Про тюрьму" title="Про тюрьму">
+    </div>
+    <div class="collect-num"><span class="num">130</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="тюрьму">
+            <p>Про тюрьму</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="хакеров">
+        <img src="img/collections/pro hackers.webp" alt="Про хакеров" title="Про хакеров">
+    </div>
+    <div class="collect-num"><span class="num">67</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="хакеров">
+            <p>Про хакеров</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="шпионов">
+        <img src="img/collections/pro spy.webp" alt="Про шпионов" title="Про шпионов">
+    </div>
+    <div class="collect-num"><span class="num">145</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="шпионов">
+            <p>Про шпионов</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="школу">
+        <img src="img/collections/pro school.webp" alt="Про школу" title="Про школу">
+    </div>
+    <div class="collect-num"><span class="num">132</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="школу">
+            <p>Про школу</p>
+        </div>
+    </div>
+</div>
+<div class="collections-row">
+    <div class="poster" style="cursor: pointer;" data-list-name="супергероев">
+        <img src="img/collections/pro hero.webp" alt="Про супергероев" title="Про супергероев">
+    </div>
+    <div class="collect-num"><span class="num">177</span></div>
+    <div class="info">
+        <div class="title" style="cursor: pointer;" data-list-name="супергероев">
+            <p>Про супергероев</p>
+        </div>
+    </div>
+</div>
+    </div>
+    <div class="genres hidden">
+  <!-- <span class="genre__item" alt="sci-fi" title="Sci-Fi">Sci-Fi</span> -->
+  <span class="genre__item" alt="арт-хаус" title="Арт-хаус">Арт-хаус</span>
+  <span class="genre__item" alt="биографический" title="Биографический">Биографический</span>
+  <span class="genre__item" alt="блокбастер" title="Блокбастер">Блокбастер</span>
+  <span class="genre__item" alt="боевик" title="Боевик">Боевик</span>
+  <span class="genre__item" alt="вестерн" title="Вестерн">Вестерн</span>
+  <span class="genre__item" alt="военный" title="Военный">Военный</span>
+  <span class="genre__item" alt="детектив" title="Детектив">Детектив</span>
+  <span class="genre__item" alt="детский" title="Детский">Детский</span>
+  <span class="genre__item" alt="документальный" title="Документальный">Документальный</span>
+  <span class="genre__item" alt="драма" title="Драма">Драма</span>
+  <span class="genre__item" alt="зарубежный" title="Зарубежный">Зарубежный</span>
+  <span class="genre__item" alt="исторический" title="Исторический">Исторический</span>
+  <span class="genre__item" alt="комедия" title="Комедия">Комедия</span>
+  <span class="genre__item" alt="короткометражный" title="Короткометражный">Короткометражный</span>
+  <span class="genre__item" alt="криминал" title="Криминал">Криминал</span>
+  <span class="genre__item" alt="мелодрама" title="Мелодрама">Мелодрама</span>
+  <span class="genre__item" alt="мистический" title="Мистический">Мистический</span>
+  <span class="genre__item" alt="музыка" title="Музыка">Музыка</span>
+  <span class="genre__item" alt="мультфильм" title="Мультфильм">Мультфильм</span>
+  <span class="genre__item" alt="мюзикл" title="Мюзикл">Мюзикл</span>
+  <span class="genre__item" alt="полнометражный" title="Полнометражный">Полнометражный</span>
+  <span class="genre__item" alt="приключения" title="Приключения">Приключения</span>
+  <!-- <span class="genre__item" alt="путешествия" title="Путешествия">Путешествия</span> -->
+  <span class="genre__item" alt="развлекательный" title="Развлекательный">Развлекательный</span>
+  <span class="genre__item" alt="реальное тв" title="Реальное ТВ">Реальное ТВ</span>
+  <span class="genre__item" alt="русский" title="Русский">Русский</span>
+  <span class="genre__item" alt="семейный" title="Семейный">Семейный</span>
+  <span class="genre__item" alt="спортивный" title="Спортивный">Спортивный</span>
+  <span class="genre__item" alt="ток-шоу" title="Ток-шоу">Ток-шоу</span>
+  <span class="genre__item" alt="триллер" title="Триллер">Триллер</span>
+  <span class="genre__item" alt="ужасы" title="Ужасы">Ужасы</span>
+  <span class="genre__item" alt="фантастика" title="Фантастика">Фантастика</span>
+  <span class="genre__item" alt="фэнтези" title="Фэнтези">Фэнтези</span>
+  <span class="genre__item" alt="эротика" title="Эротика">Эротика</span>
+</div>
+  </div>
+  
+<div class="dmca-info">
+          <div class="dmca-logo">
+          <img src="img/big_logo_11zon.webp" alt="">
+        </div>
+        <div class="info-text">
+          <p>Если Вы владелец авторских прав, просим Вас учесть, что плеер с контентом на сайте из сторонних API источников. Пишите напрямую по контактным данным этих видео-хостингов, для соблюдения DMCA. В 99% случаев они удаляют спорный контент в течении 24 часов. Плееры недоступные на первоисточнике априори не будут отображаться на KinoWatch.</p>
+        </div>
+        </div>
+
+    <footer id="footer">
+      <div id="ppb-container" class="ppb-container">
+      <div id="ppb-6" class="ppb-6"><a href="https://www.tiktok.com/@kinowatch_001?lang=ru-RU" target="_blank"><img src="img/banners/tt_500x200.png" alt="ТикТок"></a></div>
+      <div id="ppb-7" class="ppb-7"> <a href="https://www.instagram.com/kinowatch_001/" target="_blank"><img src="img/banners/inst_500x200.png" alt="Инстаграм"></a> </div>
+      <div id="ppb-8" class="ppb-8"> <a href="https://vk.com/kinowatch_bot" target="_blank"><img src="img/banners/vk_500x200.png" alt="Вконтакте"></a> </div>
+      <div id="ppb-9" class="ppb-9"> <a href="https://ok.ru/group/58259070976148" target="_blank"><img src="img/banners/ok_500x200.png" alt="Одноклассники"></a> </div>
+      <div id="ppb-10" class="ppb-10"> <a href="https://www.youtube.com/@kinowatch_001/featured" target="_blank"><img src="img/banners/yt_500x200.png" alt="YouTube"></a> </div>
+      <div id="ppb-11" class="ppb-11"><a href="https://www.tiktok.com/@kinowatch_001?lang=ru-RU" target="_blank"><img src="img/banners/rekla_500x200.png" alt="ТикТок"></a></div>
+    </div>
+      <div class="container">
+        <div class="footer-left">
+          <div class="copy">©&nbsp;&nbsp;<span id="current-year"></span> KinoWatch</div>
+          <span class="tg-bot"><a href="https://t.me/SearchWatch_bot" target="_blank" rel="nofollow">Телеграм бот</a></span>
+        </div>
+        <nav class="footer-menu">
+          <ul>
+            <li id="dmca-button" style="cursor: pointer;"><span>DMCA</span></li>
+            <li><a href="https://www.tiktok.com/@kinowatch_001?lang=ru-RU" target="_blank" rel="nofollow">TikTok</a></li>
+            <li><a href="https://www.instagram.com/kinowatch_001" target="_blank" rel="nofollow">Instagram</a></li>
+            <li><a href="https://vk.com/kinowatch_bot" target="_blank" rel="nofollow">Вконтакте</a></li>
+            <li><a href="https://ok.ru/group/58259070976148" target="_blank" rel="nofollow">Одноклассники</a></li>
+            <li><a href="https://www.youtube.com/@kinowatch_001/featured" target="_blank" rel="nofollow">YouTube</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <!--Подключаем jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Подключаем слайдер Slick -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/script_mini.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  </body>
+</html>

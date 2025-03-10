@@ -1,0 +1,3430 @@
+﻿/*Обнуление*/
+*,*:before,*:after{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Убирает выделение цвета, наследует цвет родителя */
+}
+
+a:hover {
+    text-decoration: none; /* Убирает подчеркивание при наведении */
+    color: inherit; /* Убирает выделение цвета при наведении */
+}
+::-webkit-scrollbar {
+    display: none; /* Скрыть полосу прокрутки */
+}
+
+/* Закрытие Обнуление */
+
+html{
+  font-size: 18px;
+  /*font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;*/
+  /*font-family: 'Days One', arial;*/
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  color: #fff;
+  /*background-color: #1b1b1b;*/
+  background-color: #0f0f0f;
+}
+html,body{
+  height: 100%;
+  /*width: 100%;*/
+}
+
+body{
+   background-image: linear-gradient(to right, rgb(15, 15, 15, 1) 0%, rgba(15, 15, 15, 0.7) 10%, rgba(15, 15, 15, 0) 20%, rgba(15, 15, 15, 0) 80%, rgba(15, 15, 15, 0.7) 90%, rgb(15, 15, 15, 1) 100%), linear-gradient(to bottom, rgb(15, 15, 15, 1) 0%, rgba(15, 15, 15, 0.3) 10%, rgba(15, 15, 15, 0.4) 20%, rgba(15, 15, 15, 0) 30%, rgba(15, 15, 15, 0) 70%, rgba(15, 15, 15, 0.5) 80%, rgb(15, 15, 15, 0.7) 90%, rgb(15, 15, 15, 1) 100%), url(../img/bg/avengers-endgame-heroes-wallpaper-7680x4800_11.webp);
+background-size: cover;
+/*background-position: top;*/
+background-position: center;
+}
+
+#overlay{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 1);
+z-index: 10000;
+display: none;
+}
+
+.content {
+  background-size: cover;
+  /*background-blend-mode: overlay; */
+  transition: background-image 0.5s ease; 
+}
+
+.content.transitioning {
+  transition: none; 
+}
+
+/* Слайдер */
+.slick-slider{
+    min-width: 100%;
+
+}
+
+/*ЛОГО*/
+.header {
+    width: 100%;
+    height: auto;
+  /*background: linear-gradient(to bottom, #212529, rgba(0, 0, 0, 0) 4.375rem);*/
+}
+
+.logo{
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+    padding: 0 0 0 5rem;
+}
+.logo img {
+  max-width: 10%;
+}
+
+/*МЕНЮ*/
+.hidden {
+  display: none !important;
+}
+.menu  {
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    /*width: calc(100% - 0rem);*/
+}
+.menu button {
+    /*margin-right: 0.625rem;*/
+    padding: 0.625rem 1.875rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    /*font-weight: bold;*/
+    color: white;
+    border-radius: 0.9375rem 0.9375rem 0rem 0rem;
+    /*background: #292929de;*/
+    background: #292929;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-left: 0.0625rem solid #fff;
+    border-right: 0.0625rem solid #fff;
+    border-top: 0.0625rem solid #fff;
+    font-family: 'Days One', arial;
+}
+.menu  button:hover {
+    background-color: #171717; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+}
+@keyframes colorChange {
+            0% { color: #f1ff00; }
+            20% { color: #00ff41; }
+            40% { color: #00c2ff; }
+            50% { color: #e54cff; }
+            60% { color: #33ff8c }
+            80% { color: #704dff; }
+            100% { color: #fff; }
+}
+
+#btn-collections {
+  position: relative;
+}
+
+#btn-collections span {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: -0.375rem;
+  color: #fff;
+  /*text-transform: uppercase;*/
+  animation: colorChange 5s infinite,flip 4s infinite;
+   /*animation: colorChange 5s infinite, flip 5s infinite 2.5s;*/
+  animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
+  }
+}
+
+/*ЗАКРЫТИЕ МЕНЮ*/
+
+.social_icons {
+    background: rgba(256,256,256,0.5);
+    box-shadow: 0rem 0.625rem 3.125rem -0.4375rem #5c009f;
+    padding: 0rem 0.625rem;
+    /*border-radius: 0.625rem;*/
+    border-radius: 0rem 0.625rem 0.625rem 0rem;
+    position: fixed; /* Фиксируем на экране */
+    left: 0rem; /* Отступ от левого края */
+    top: 20%; /* Выравнивание по центру по вертикали */
+    transform: translateY(-20%); /* Центрируем вертикально */
+    z-index: 1000; /* Обеспечиваем, что иконки всегда будут выше других элементов */
+}
+
+.icon {
+    margin: 0.625rem 0; /* Отступы между иконками */
+}
+
+.icon img {
+    width: 2.5rem; /* Ширина иконки */
+    height: 2.5rem; /* Высота иконки */
+    transition: transform 0.2s; /* Плавное масштабирование */
+}
+
+.icon:hover img {
+    transform: scale(1.1); /* Увеличиваем при наведении */
+}
+.play {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.25rem;
+    top: 0;
+    z-index: 50;
+    padding: 1.25rem 0.625rem;
+    text-align: center;
+    display: block;
+    /*background-color: rgba(0,0,0,0.6);*/
+    background-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    color: #d9b32e !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .4s; /* Добавлено для плавного перехода */
+    border-radius: 0.625rem;
+}
+
+.play:hover {
+    opacity: 1; /*  Появится при наведении */
+}
+
+a, .play, .poster img {
+    transition: color .4s, background-color .4s, opacity .4s;
+}
+
+.play i {
+    font-size: 3.125rem;
+}
+/*КОНЕЦ ЛОГО*/
+.content{
+    /*transition: background-image 2s linear !important;*/
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+/*СЛАЙДЕР ВЕБ ВЕРСИЯ*/
+.wrapper-slider {
+    height: auto;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    /*background-image: none !important;*/
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+    /*background: #292929de;*/
+    background: #292929;
+    
+    border: 0.0625rem solid #fff;
+    border-radius: 0rem 0.9375rem 0.9375rem 0.9375rem;
+    display: flex;
+}
+
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    align-items: flex-start;
+    padding: 0.9375rem 0;
+}
+
+/* Слайд */
+.slick-slide{    transform: scale(1);
+    transition: transform 1s ease-in-out;}
+
+/* Слайд по центру */
+.slick-slide.slick-center{
+    transform: scale(1.2) !important;
+    transition: transform 1s ease-in-out;
+}
+
+/* Конкретный слайдер */
+.slider {
+    position: relative;
+    /*padding: 0rem 3.75rem;*/
+    width: 100%;
+    height: auto;
+}
+
+.pos_arrows button {
+cursor: pointer;
+}
+
+.pos_arrows {
+    display: flex;          /* Используем flexbox */
+    justify-content: center; /* Центрируем содержимое */
+    margin-top: 2.5rem;     /* Отступ сверху (по желанию) */
+}
+
+.pos_arrows .slick-arrow{
+    /*position: absolute;*/
+    position: relative;
+    top: 65%;
+    margin: -1.875rem 0rem 0rem 0rem;
+    z-index: 10;
+    font-size: 0;
+    width: 3.75rem;
+    height: 3.75rem;
+}
+.pos_arrows .slick-arrow.slick-prev{
+    /*left: 42%;*/
+    left: -35%;
+    background: url('../img/arrows/mainLeft-arrow.svg') 0 0 / 100% no-repeat;
+}
+.pos_arrows .slick-arrow.slick-next{
+    /*right: 42%;*/
+    right: -35%;
+    background: url('../img/arrows/mainRight-arrow.svg') 0 0 / 100% no-repeat;
+}
+.pos_arrows .slick-arrow.slick-disabled{
+    opacity: 0.2;
+}
+
+.pos_arrows .slick-arrow.slick-prev:active {
+  background: url('../img/arrows/mainLeftClick_arrow.svg') 0 0 / 100% no-repeat;
+    transform: scale(0.9) !important;
+}
+.pos_arrows .slick-arrow.slick-next:active {
+  background: url('../img/arrows/mainRightClick_arrow.svg') 0 0 / 100% no-repeat;
+    transform: scale(0.9) !important;
+}
+
+.slider .slick-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .slick-dots li{
+  list-style: none;
+  margin: 0rem 0.3125rem;
+}
+.slider .slick-dots button{
+  font-size: 0;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+}
+
+.slider .slick-dots li.slick-active button{
+  /*background-color: transparent;*/
+  width: 2.5rem;
+  background-color: #d9b32e;
+  /*border: 0.0625rem solid #fff;*/
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  /*border-radius: 25%;*/
+      border-radius: 3.125rem;
+}
+
+.slider__item {
+  padding: 0rem 0.625rem;
+  text-align: center;
+}
+.slider__item .poster img{
+    max-width: 100%;
+    border-radius: 0.625rem;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    /*border: 0.0625rem solid #fff;*/
+
+}
+.slider .slider__item .poster {
+position: relative;
+}
+
+.slider__item.slick-center{
+  
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*padding: 0.125rem 0;*/
+    color: white;
+    border-radius: 0.3125rem;
+    justify-content: flex-end;
+    background-color: #00a312;
+    /* box-shadow: inset 0rem 0rem 0.25rem 0.125rem rgb(0 0 0); */
+    top: 0.3125rem;
+    left: 0.3125rem;
+    position: absolute;
+    padding: 0 0.5rem;
+}
+.rating img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.3125rem;
+}
+.rating img:last-of-type {
+    margin-left: 0.625rem; /* Отступ слева для второго изображения */
+}
+.title, .year, .genre {
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 0;
+    padding: 0 0.25rem;
+}
+.title {
+    font-size: 0.875rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-weight: bold;
+    }
+.r_kp, .r_imdb {
+    font-size: 1.625rem;
+    /*font-weight: 900;*/
+    color: white;
+    filter: drop-shadow(0rem 0rem 0.0625rem black) drop-shadow(0rem 0rem 0.0625rem black);
+}
+/*ЗАКРЫТИЕ СЛАЙДЕРА ВЕБ ВЕРСИЯ*/
+
+/*ФОРМА ПОИСКА ВЕБ ВЕРСИЯ*/
+.wrapper-form {
+    margin: 0 1.875rem;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    /*box-shadow: 0rem 0rem 0.625rem 0.1875rem rgb(255 255 255);*/
+    box-shadow: 0rem 0rem 0.625rem 0.3125rem rgb(217 179 46);
+        /*box-shadow: 0rem 0rem 0.9375rem 0.625rem rgb(39 39 39);*/
+    border-radius: 0.5rem;
+}
+#search-form {
+    display: flex;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0rem 0.625rem;
+}
+/* Убираем стандартный стиль placeholder */
+input::placeholder { 
+    /*color: transparent; */
+    opacity: 1; /* Прозрачность */
+    font-size: 1rem;
+}
+/* Когда поле ввода в фокусе */
+#search-input:focus::placeholder {
+    color: transparent; /* Прозрачный текст */
+}
+
+/* Сбрасываем цвет placeholder когда поле ввода не в фокусе */
+#search-input::placeholder {
+    color: #b0b0b0 !important;
+}
+#search-input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #b0b0b0 !important;
+}
+
+#search-input::-moz-placeholder { /* Firefox 19+ */
+    color: #b0b0b0 !important;
+}
+
+#search-input:-ms-input-placeholder { /* IE 10+ */
+    color: #b0b0b0 !important;
+}
+
+#search-input:-moz-placeholder { /* Firefox 18- */
+    color: #b0b0b0 !important;
+}
+#search-input {
+    padding: 0.75625rem !important;
+    width: 100% !important;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+    background: #fff;
+    color: black;
+    font-size: 1.125rem;
+    font-weight: bold;
+    /*background-image: radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);*/
+     border-left: 0.1875rem solid #292929;
+    border-bottom: 0.1875rem solid #292929;
+    border-top: 0.1875rem solid #292929;
+        /*border-bottom: 0.1875rem solid #272727;
+    border-top: 0.1875rem solid #272727;
+    border-right: 0.1875rem solid #272727;*/
+    outline: none !important;
+    /*box-shadow: inset 0rem 0rem 0.75rem 0.3125rem rgb(0 0 0);*/
+    box-shadow: inset 0rem 0rem 0.625rem 0.25rem rgb(0 0 0)
+}
+#search-form button {
+    padding: 0.75rem 1.5625rem;
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    font-weight: bold;
+    background-color: #d9b32e;
+    font-size: 1.375rem;
+    color: #fff;
+    margin-left: 0rem;
+    border-bottom: 0.1875rem solid #292929;
+    border-top: 0.1875rem solid #292929;
+    border-right: 0.1875rem solid #292929;
+       /* border-bottom: 0.1875rem solid #272727;
+    border-top: 0.1875rem solid #272727;
+    border-right: 0.1875rem solid #272727;*/
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+#search-form button:active {
+    background-color: #a17d00 !important;
+    transform: scale(0.95);
+    /*color: black !important;*/
+}
+/*КОНЕЦ ФОРМЫ ПОИСКА ВЕБ ВЕРСИИ*/
+
+/*РЕЗУЛЬТАТ ПОИСКА ВЕБ ВЕРСИЯ*/
+.search_form{
+  width: 90%;
+    padding: 0.9375rem 0 0;
+    /*margin: 2.5rem 0;*/
+}
+.nav-btn-back, .nav-btn-back-mobile {
+      width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    background: #292929;
+    padding: 0rem 1.25rem;
+    /*padding: 0.3125rem 1.25rem 0;*/
+    border-radius: 1.25rem 1.25rem 0 0;
+        border-bottom: 0.0625rem solid;
+}
+#btn-back {
+    width: 3.125rem;
+    height: 3.125rem;
+    background: url(../img/arrows/back_arrow.svg) 0 0 / 100% no-repeat;
+    background-size: contain;
+}
+#btn-back:active {
+  background: url('../img/arrows/backClick_arrow.svg') 0 0 / 100% no-repeat;
+    transform: scale(0.9) !important;
+}
+#btn-back-mobile {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background: url('../img/arrows/back_2_w.svg') 0 0 / 100% no-repeat;
+    background-size: contain;
+}
+#btn-back-mobile:active {
+  background: url('../img/arrows/back_2_e.svg') 0 0 / 100% no-repeat;
+    transform: scale(0.9) !important;
+}
+.search-results-container, .collections-results-container, .genre-results-container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*justify-content: flex-start;*/
+    background: #292929;
+    padding: 0.625rem;
+    border-radius: 0 0 1.25rem 1.25rem;
+    /*margin-top: 2.5rem;*/
+}
+.search-result-row, .collections-result-row, .genre-result-row {
+    position: relative;
+    /*width: calc(11.2% - 0rem);*/
+    width: calc(20% - 1.25rem);
+    text-align: center;
+    margin: 0.625rem;
+    /*transition: opacity 1s ease-in-out;*/
+}
+.search-result-row .info, .collections-result-row .info, .genre-result-row .info {
+    background: #151515;
+    padding: 0.3125rem 0.125rem;
+    border-radius: 0.3125rem;
+}
+.search-result-row .poster, .collections-result-row .poster, .genre-result-row .poster {
+    position: relative; /* Добавлено */
+}
+.search-result-row .poster img, .collections-result-row .poster img, .genre-result-row .poster img {
+    width: 100%;
+    border-radius: 0.625rem;
+}
+.search-result-row .poster .rating, .collections-result-row .poster .rating, .genre-result-row .poster .rating{
+    position: absolute;
+   /* bottom: 0.375rem;
+    right: 0rem;*/
+    /*background-color: rgb(0 0 0);*/
+    /*background-image: radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);*/
+    color: white;
+    /*padding: 0.4375rem;*/
+        padding: 0 0.5rem;
+    border-radius: 0.3125rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #00a312;
+    /*box-shadow: inset 0rem 0rem 0.25rem 0.125rem rgb(0 0 0);*/
+    top: 0.3125rem;
+    left: 0.3125rem;
+}
+.search-result-row .poster .rating img, .collections-result-row .poster .rating img, .genre-result-row .poster .rating img {
+    width: 1.25rem; 
+    height: 1.25rem; 
+    margin-right: 0.3125rem;
+    border: none;
+    border-radius: 0;
+}
+.search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.875rem;
+}
+
+.search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+     font-size: 0.75rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+/*КОНЕЦ РЕЗУЛЬТАТА ПОИСКА ВЕБ ВЕРСИИ*/
+
+/*СТИЛИ ДЛЯ ПОДБОРОК*/
+.collection-name, .search-name, .collect-name {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90%;
+    margin: 1.5625rem 0 0.3125rem;
+}
+.collection-name span, .collect-name span, .name-mibile span {
+    margin-left: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+.collections-results-container{
+    border-radius: 0rem 0rem 1.25rem 1.25rem;
+
+}
+.collections{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #292929;
+    padding: 0.625rem;
+    border-radius: 1.25rem;
+}
+.collections-row {
+    position: relative;
+    width: calc(20% - 1.25rem);
+    margin: 0.625rem;
+}
+
+.collections-row .poster {
+    position: relative;
+    overflow: hidden; /* Скрытие элементов, выходящих за границы */
+    border-radius: 0.625rem; /* Закругление углов постера */
+    box-shadow: none;
+    transform: scale(1);
+    transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+.collections-row:hover .poster{
+  transform: scale(1.05);
+  /*box-shadow: 0 0 0.9375rem 0.125rem #3498db;*/
+  box-shadow: 0 0 0.9375rem 0.125rem #d9b32e;
+    outline: none;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.collections-row:hover .collect-num{
+  transform: scale(1.15);
+    outline: none;
+    transition: transform 0.2s ease-in-out;
+}
+.collections-row .poster img {
+    width: 100%; /* Ширина изображения на 100% от родителя */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    display: block; /* Убирает пробелы под изображением */
+}
+
+.collect-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.125rem; 
+    height: 3.125rem;
+    border-radius: 50%;
+    /*background: radial-gradient(circle, rgb(255, 217, 0) 0%, rgba(0, 0, 0, 1) 80%);*/
+    background: radial-gradient(circle, rgb(0 0 0) 45%, rgb(196 0 255) 75%);
+    position: absolute; 
+    top: 0.3125rem; 
+    right: 0.3125rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2); 
+    font-size: 1rem;
+    /*font-weight: bold; */
+    text-align: center; 
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.collections-row .info {
+    background-color: #151515; /* Черный фон */
+    text-align: center; /* Центрирование текста */
+    /*padding: 0.625rem;  Отступы внутри блока */
+    /*border-radius: 0 0 0.625rem 0.625rem;  Закругление нижних углов */
+    padding: 0.4375rem 0.125rem;
+    border-radius: 0.3125rem;
+    margin: 0.375rem 0 0;
+}
+.collections-row:hover .info {
+  transform: translateY(0.25rem); /* Смещение вниз на 5 пикселей */
+  transition: transform 0.2s ease-in-out; /* Плавный переход */
+}
+
+.collections-row:not(:hover) .info {
+  transform: translateY(0); /* Возвращение в исходное положение */
+  transition: transform 0.15s ease-in-out; /* Плавный переход */
+}
+.collections-row .title p{
+    font-size: 1rem;
+}
+/*ЗАКРЫТИЕ СТИЛЕЙ ДЛЯ ПОДБОРОК*/
+
+
+
+#footer {
+    background-color: #1b1b1b;
+    color: white; /* Цвет текста */
+    margin: 3.75rem 0 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3.125rem; /* Отступы */
+    width: 100%;
+    margin: 0 auto;
+    border-top: 0.0625rem solid #fff;
+    font-size: 1.25rem;
+}
+.tg-bot {
+    margin-left: 1.25rem;
+}
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer-menu {
+    display: flex;
+}
+
+.footer-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-menu li {
+    margin-left: 0.9375rem; /* Отступы между элементами */
+}
+
+.footer-menu a {
+    color: white; /* Цвет ссылок */
+    text-decoration: none; /* Без подчеркивания */
+}
+
+.footer-menu a:hover, .tg-bot a:hover, #dmca-button:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: #ffad00;
+}
+
+/*НОВАЯ АНИМАЦИЯ*/
+@keyframes firstAnimation {
+  0% {
+    box-shadow: 0rem 0rem 1.25rem 0.3125rem rgba(236, 174, 68, 0);
+  }
+  50% {
+    box-shadow: 0rem 0rem 1.25rem 0.3125rem rgba(236, 174, 68, 1);
+  }
+  100% {
+    box-shadow: 0rem 0rem 1.25rem 0.3125rem rgba(236, 174, 68, 0);
+  }
+}
+
+.firstLoader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 10000;
+    /*background-color: black;*/
+    background-color: rgba(26, 26, 26, 1);
+    position: fixed;
+    top: 0;
+}
+
+.big-logo {
+    width: 15%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    animation: firstAnimation 2s infinite;
+    border-radius: 50%;
+    -webkit-animation: firstAnimation 2s infinite;
+  -moz-animation: firstAnimation 2s infinite;
+  -o-animation: firstAnimation 2s infinite;
+  -ms-animation: firstAnimation 2s infinite;
+}
+
+.big-logo img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+}
+.notify {
+  width: 90%;
+  opacity: 0;
+    margin-top: 1.5625rem;
+    font-size: 1.25rem;
+   text-align: center;
+}
+/*ЗАКРЫТИЕ НОВОЙ АНИМАЦИИ*/
+
+/*6 БАННЕРОВ ПОД РЕЗУЛЬТАТОМ ПОИСКА*/
+#ppb-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.ppb-6, .ppb-7, .ppb-8, .ppb-9, .ppb-10, .ppb-11 {
+    flex: 1 0 16.6%;
+    max-width: 16.6%;
+    box-sizing: border-box;
+    border-top: 0.0625rem solid #fff;
+    border-left: 0.0625rem solid #fff;
+    border-right: 0.0625rem solid #fff;
+}
+
+#ppb-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.ppb-12{
+    position: fixed;
+    left: 0rem;
+    top: 90%;
+    transform: translateY(-90%);
+    z-index: 1000;
+    width: 9%;
+    height: auto;
+    margin: 0 0.3125rem;
+}
+.ppb-12 img{
+    width: 100%;
+    height: auto;
+}
+/*ЗАКРЫТИЕ БАННЕРОВ ПОД РЕЗУЛЬТАТОМ ПОИСКА*/
+
+#ppb-5{
+    position: fixed;
+    right: 0rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    width: 9%;
+    height: auto;
+    margin: 0 0.3125rem;
+}
+#ppb-5 img{
+    width: 100%;
+    height: auto;
+}
+.top-content {
+    height: auto;
+    width: 100%;
+    /* padding: 0.625rem 0.625rem; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+.wrapper-slider_films, .wrapper-slider_series, .wrapper-slider_cartoon, .wrapper-slider_cartoon-series, .wrapper-slider_anime, .wrapper-slider_anime-tv-series, .wrapper-slider_tv-show {
+    height: auto;
+    width: 90%;
+    /*padding: 0.625rem 0.625rem;*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+/* Ограничивающая оболочка */
+.slider-films .slick-list, .slider-series .slick-list, .slider-cartoon .slick-list, .slider-cartoon-series .slick-list, .slider-anime .slick-list, .slider-anime-tv-series .slick-list, .slider-tv-show .slick-list {
+    overflow: hidden;
+    background: none;
+    /*background: #292929de;*/
+    background: #292929;
+    padding: 0rem;
+    border: 0.0625rem solid #fff;
+    /*border-radius: 1.25rem;*/
+    /*border-radius: 0rem 0.9375rem 0.9375rem;*/
+    border-radius: 0.9375rem;
+    display: flex;
+    /*justify-content: center;*/
+}
+
+/* Лента слайдов */
+.slider-films .slick-track, .slider-series .slick-track, .slider-cartoon .slick-track, .slider-cartoon-series .slick-track, .slider-anime .slick-track, .slider-anime-tv-series .slick-track, .slider-tv-show .slick-track{
+    display: flex;
+    align-items: flex-start;
+    padding: 0.9375rem 0;
+}
+
+/* Слайд */
+.slider-films .slick-slide, .slider-series .slick-slide, .slider-cartoon .slick-slide, .slider-cartoon-series .slick-slide, .slider-anime .slick-slide, .slider-anime-tv-series .slick-slide, .slider-tv-show .slick-slide{
+    transform: scale(1);
+    transition: transform 1s ease-in-out;}
+
+/* Слайд по центру */
+.slider-films .slick-slide.slick-center, .slider-series .slick-slide.slick-center, .slider-cartoon .slick-slide.slick-center, .slider-cartoon-series .slick-slide.slick-center, .slider-anime .slick-slide.slick-center, .slider-anime-tv-series .slick-slide.slick-center, .slider-tv-show .slick-slide.slick-center{
+    transform: scale(1.2) !important;
+    transition: transform 1s ease-in-out;
+}
+
+/* Конкретный слайдер */
+.slider-films, .slider-series, .slider-cartoon, .slider-cartoon-series, .slider-anime, .slider-anime-tv-series, .slider-tv-show {
+    position: relative;
+    /*padding: 0rem 3.75rem;*/
+    width: 100%;
+    height: auto;
+}
+
+.wrapper-slider_films .arrows_films button, .wrapper-slider_series .arrows_series button, .wrapper-slider_cartoon .arrows_cartoon button, .wrapper-slider_cartoon-series .arrows_cartoon-series button, .wrapper-slider_anime .arrows_anime button, .wrapper-slider_anime-tv-series .arrows_anime-tv-series button, .wrapper-slider_tv-show .arrows_tv-show button {
+   cursor: pointer;
+}
+.wrapper-slider_films .arrows_films, .wrapper-slider_series .arrows_series, .wrapper-slider_cartoon .arrows_cartoon, .wrapper-slider_cartoon-series .arrows_cartoon-series, .wrapper-slider_anime .arrows_anime, .wrapper-slider_anime-tv-series .arrows_anime-tv-series, .wrapper-slider_tv-show .arrows_tv-show {
+
+display: flex;          /* Используем flexbox */
+    justify-content: center; /* Центрируем содержимое */
+    /*margin-top: 0.625rem;*/
+}
+.wrapper-slider_films .arrows_films, .wrapper-slider_series  .arrows_series, .wrapper-slider_cartoon .arrows_cartoon, .wrapper-slider_cartoon-series .arrows_cartoon-series, .wrapper-slider_anime .arrows_anime, .wrapper-slider_anime-tv-series .arrows_anime-tv-series, .wrapper-slider_tv-show .arrows_tv-show {
+    display: flex;          /* Используем flexbox */
+    justify-content: center; /* Центрируем содержимое */
+    /*margin-top: 2.5rem;*/
+}
+
+.wrapper-slider_films .arrows_films .slick-arrow, .wrapper-slider_series .arrows_series .slick-arrow, .wrapper-slider_cartoon .arrows_cartoon .slick-arrow, .wrapper-slider_cartoon-series .arrows_cartoon-series .slick-arrow, .wrapper-slider_anime .arrows_anime .slick-arrow, .wrapper-slider_anime-tv-series .arrows_anime-tv-series .slick-arrow, .wrapper-slider_tv-show .arrows_tv-show .slick-arrow{
+    /*position: absolute;*/
+    position: relative;
+    top: 65%;
+    margin: -1.875rem 0rem 0rem 0rem;
+    z-index: 10;
+    font-size: 0;
+    width: 3.125rem;
+    height: 2.5rem;
+}
+.wrapper-slider_films .arrows_films .slick-arrow.slick-prev, .wrapper-slider_series .arrows_series .slick-arrow.slick-prev, .wrapper-slider_cartoon .arrows_cartoon .slick-arrow.slick-prev, .wrapper-slider_cartoon-series .arrows_cartoon-series .slick-arrow.slick-prev, .wrapper-slider_anime .arrows_anime .slick-arrow.slick-prev, .wrapper-slider_anime-tv-series .arrows_anime-tv-series .slick-arrow.slick-prev, .wrapper-slider_tv-show .arrows_tv-show .slick-arrow.slick-prev{
+    left: -20%;
+    background: url('../img/arrows/allLeft.svg') 0 0 / 100% no-repeat;
+}
+.wrapper-slider_films .arrows_films .slick-arrow.slick-next, .wrapper-slider_series .arrows_series .slick-arrow.slick-next, .wrapper-slider_cartoon .arrows_cartoon .slick-arrow.slick-next, .wrapper-slider_cartoon-series .arrows_cartoon-series .slick-arrow.slick-next, .wrapper-slider_anime .arrows_anime .slick-arrow.slick-next, .wrapper-slider_anime-tv-series .arrows_anime-tv-series .slick-arrow.slick-next, .wrapper-slider_tv-show .arrows_tv-show .slick-arrow.slick-next{
+    right: 10%;
+    background: url('../img/arrows/allRight.svg') 0 0 / 100% no-repeat;
+}
+.arrows_films .slick-arrow.slick-prev:active, .arrows_series .slick-arrow.slick-prev:active, .arrows_cartoon .slick-arrow.slick-prev:active, .arrows_cartoon-series .slick-arrow.slick-prev:active, .arrows_anime .slick-arrow.slick-prev:active, .arrows_anime-tv-series .slick-arrow.slick-prev:active, .arrows_tv-show .slick-arrow.slick-prev:active {
+  background: url('../img/arrows/allLeftClick_arrow.svg') 0 0 / 100% no-repeat !important;
+    transform: scale(0.9) !important;
+}
+.arrows_films .slick-arrow.slick-next:active, .arrows_series .slick-arrow.slick-next:active, .arrows_cartoon .slick-arrow.slick-next:active, .arrows_cartoon-series .slick-arrow.slick-next:active, .arrows_anime .slick-arrow.slick-next:active, .arrows_anime-tv-series .slick-arrow.slick-next:active, .arrows_tv-show .slick-arrow.slick-next:active {
+  background: url('../img/arrows/allRightClick_arrow.svg') 0 0 / 100% no-repeat !important;
+    transform: scale(0.9) !important;
+}
+
+.wrapper-slider_films .arrows_films .slick-arrow.slick-disabled, .wrapper-slider_series .arrows_series .slick-arrow.slick-disabled, .wrapper-slider_cartoon .arrows_cartoon .slick-arrow.slick-disabled, .wrapper-slider_cartoon-series .arrows_cartoon-series .slick-arrow.slick-disabled, .wrapper-slider_anime .arrows_anime .slick-arrow.slick-disabled, .wrapper-slider_anime-tv-series .arrows_anime-tv-series .slick-arrow.slick-disabled, .wrapper-slider_tv-show .arrows_tv-show .slick-arrow.slick-disabled{
+    opacity: 0.2;
+}
+
+.slider-films .slick-dots, .slider-series .slick-dots, .slider-cartoon .slick-dots, .slider-cartoon-series .slick-dots, .slider-anime .slick-dots, .slider-anime-tv-series .slick-dots, .slider-tv-show .slick-dots{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider-films .slick-dots li, .slider-series .slick-dots li, .slider-cartoon .slick-dots li, .slider-cartoon-series .slick-dots li, .slider-anime .slick-dots li, .slider-anime-tv-series .slick-dots li, .slider-tv-show .slick-dots li{
+  list-style: none;
+  margin: 0rem 0.625rem;
+}
+.slider-films .slick-dots button, .slider-series .slick-dots button, .slider-cartoon .slick-dots button, .slider-cartoon-series .slick-dots button, .slider-anime .slick-dots button, .slider-anime-tv-series .slick-dots button, .slider-tv-show .slick-dots button{
+  font-size: 0;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.slider-films .slick-dots li.slick-active button, .slider-series .slick-dots li.slick-active button, .slider-cartoon .slick-dots li.slick-active button, .slider-cartoon-series .slick-dots li.slick-active button, .slider-anime .slick-dots li.slick-active button, .slider-anime-tv-series .slick-dots li.slick-active button, .slider-tv-show .slick-dots li.slick-active button{
+  background-color: transparent;
+  border: 0.0625rem solid #fff;
+}
+
+.slider-films__item, .slider-series__item, .slider-cartoon__item, .slider-cartoon-series__item, .slider-anime__item, .slider-anime-tv-series__item, .slider-tv-show__item {
+  padding: 0rem 0.625rem;
+  text-align: center;
+}
+.slider-films__item .poster, .slider-series__item .poster, .slider-cartoon__item .poster, .slider-cartoon-series__item .poster, .slider-anime__item .poster, .slider-anime-tv-series__item .poster, .slider-tv-show__item .poster {
+position: relative;
+}
+
+.slider-films__item .poster img, .slider-series__item .poster img, .slider-cartoon__item .poster img, .slider-cartoon-series__item .poster img, .slider-anime__item .poster img, .slider-anime-tv-series__item .poster img, .slider-tv-show__item .poster img{
+    max-width: 100%;
+    border-radius: 0.625rem;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    /*border: 0.0625rem solid #fff;*/
+}
+.slider-films__item .slick-center{
+  
+}
+
+.slider-films__item .rating, .slider-series__item .rating, .slider-cartoon__item .rating, .slider-cartoon-series__item .rating, .slider-anime__item .rating, .slider-anime-tv-series__item .rating, .slider-tv-show__item .rating {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    position: absolute;
+    color: white;
+    border-radius: 0.3125rem;
+    justify-content: flex-end;
+    background-color: #00a312;
+    /*box-shadow: inset 0rem 0rem 0.25rem 0.125rem rgb(0 0 0);*/
+    top: 0.3125rem;
+    left: 0.3125rem;
+}
+
+.slider-films__item .rating img, .slider-series__item .rating img, .slider-cartoon__item .rating img, .slider-cartoon-series__item .rating img, .slider-anime__item .rating img, .slider-anime-tv-series__item .rating img, .slider-tv-show__item .rating img {
+    width: 1.25rem; /* Установите нужный размер */
+    height: 1.25rem; /* Установите нужный размер */
+    margin-right: 0.3125rem;
+    border-radius: 0;
+}
+
+.slider-films__item .rating img:last-of-type, .slider-series__item .rating img:last-of-type, .slider-cartoon__item .rating img:last-of-type, .slider-cartoon-series__item .rating img:last-of-type, .slider-anime__item .rating img:last-of-type, .slider-anime-tv-series__item .rating img:last-of-type, .slider-tv-show__item .rating img:last-of-type {
+    margin-left: 0.625rem; /* Отступ слева для второго изображения */
+}
+
+.slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 1rem;
+}
+.slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 0.875rem;
+}
+.slider_name_nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin: 1.5625rem 0 0.3125rem;
+}
+.slider_name_nav span {
+margin-left: 0.3125rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+    margin-right: 0.625rem;
+}
+.name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.arrows_films, .arrows_series, .arrows_cartoon, .arrows_cartoon-series, .arrows_anime, .arrows_anime-tv-series, .arrows_tv-show {
+  display: flex;
+  justify-content: flex-end; /* Выравниваем стрелки по правому краю */
+}
+
+.arrows_films .slick-arrow, .arrows_series .slick-arrow, .arrows_cartoon .slick-arrow, .arrows_cartoon-series .slick-arrow, .arrows_anime .slick-arrow, .arrows_anime-tv-series .slick-arrow, .arrows_tv-show .slick-arrow {
+  margin: 0 0.3125rem; /* Отступ между стрелками */
+}
+
+/* GRID */
+
+.twelve { width: 100%; }
+.eleven { width: 91.53%; }
+.ten { width: 83.06%; }
+.nine { width: 74.6%; }
+.eight { width: 66.13%; }
+.seven { width: 57.66%; }
+.six { width: 49.2%; }
+.five { width: 40.73%; }
+.four { width: 32.26%; }
+.three { width: 23.8%; }
+.two { width: 15.33%; }
+.one { width: 6.866%; }
+
+/* COLUMNS */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+  width: 100%;
+    height: auto;
+}
+
+.col:first-of-type {
+  margin-left: 0;
+}
+
+.loader-new{
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+    height: auto;
+}
+
+.three{
+  /*background-color: #eee;*/
+  padding: 5rem 0;
+
+}
+
+/* ALL LOADERS */
+
+.loader-6{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* LOADER 6 */
+
+#loader-6{
+  top: 0rem;
+  left: -0.15625rem;
+}
+
+#loader-6 span{
+  display: inline-block;
+  width: 5.3125rem;
+  height: 10rem;
+  background-color: #fff;
+}
+
+#loader-6 span:nth-child(1){
+  animation: grow 1s ease-in-out infinite;
+}
+
+#loader-6 span:nth-child(2){
+  animation: grow 1s ease-in-out 0.15s infinite;
+}
+
+#loader-6 span:nth-child(3){
+  animation: grow 1s ease-in-out 0.30s infinite;
+}
+
+#loader-6 span:nth-child(4){
+  animation: grow 1s ease-in-out 0.45s infinite;
+}
+
+@keyframes grow{
+  0%, 100%{
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+
+  50%{
+    -webkit-transform: scaleY(1.8);
+    -ms-transform: scaleY(1.8);
+    -o-transform: scaleY(1.8);
+    transform: scaleY(1.8);
+  }
+}
+.loader {
+    position: relative;
+    /*top: calc(50% - 2rem);*/
+    /*left: calc(50% - 2rem);*/
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    perspective: 50rem;
+}
+
+.inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;  
+}
+
+.inner.one {
+    left: 0%;
+    top: 0%;
+    animation: rotate-one 1s linear infinite;
+    border-bottom: 0.625rem solid #ffad00;
+}
+
+.inner.two {
+    right: 0%;
+    top: 0%;
+    animation: rotate-two 1s linear infinite;
+    border-right: 0.625rem solid #ffad00;
+}
+
+.inner.three {
+    right: 0%;
+    bottom: 0%;
+    animation: rotate-three 1s linear infinite;
+    border-top: 0.625rem solid #ffad00;
+}
+
+@keyframes rotate-one {
+  0% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+.slick-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  filter: blur(0.3125rem); 
+}
+
+.dmca-info {
+      position: fixed;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    background-color: #1b1b1b;
+    padding: 1.25rem;
+    /*box-shadow: 0rem 0rem 0.625rem rgb(0 0 0 / 20%);*/
+    border-radius: 0.625rem;
+        /*border: 0.1875rem solid #d9b32e;*/
+    /*box-shadow: 0rem 0rem 1.875rem 0.3125rem rgb(217 179 46);*/
+     z-index: 10000;
+     opacity: 0;
+     transition: opacity 0.5s ease;
+     pointer-events: none;
+     box-shadow: inset 0rem 0rem 0.625rem 0.25rem rgb(73 73 73);
+}
+
+.dmca-info .dmca-logo {
+    text-align: center; /* Центрирование логотипа */
+    margin-bottom: 0.9375rem;
+}
+
+.dmca-info .dmca-logo img {
+    max-width: 40%;
+    height: auto;
+    box-shadow: 0rem 0rem 0.625rem 0.25rem rgb(217 179 46);
+    border-radius: 50%;
+}
+
+.dmca-info .info-text p {
+    font-size: 1.25rem;
+    text-align: center;
+    line-height: 1.3;
+    background-color: #3e3e3e;
+    padding: 0.625rem 1.25rem;
+    border: 0.0625rem solid #000;
+    box-shadow: inset 0rem 0rem 0.625rem 0.25rem rgb(0 0 0);
+    border-radius: 0.625rem;
+}
+
+   .dmca-info.show {
+     opacity: 1;
+     pointer-events: auto;
+   }
+
+.genres {
+  width: 90%;
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  background: #292929;
+  transition: transform 0.2s ease;
+  padding: 2.5rem 9.375rem;
+  border-radius: 1.25rem;
+}
+
+.genre__item {
+   padding: 0rem 1.25rem 0.25rem;
+    padding: 0.25rem 0.9375rem;
+    background-color: #484848;
+    cursor: pointer;
+    /* font-weight: 900; */
+    color: #ffffff;
+    /* filter: drop-shadow(0rem 0rem 0.0625rem white); */
+    filter: drop-shadow(0rem 0rem 0.3125rem black);
+    font-size: 1.375rem;
+     border: 0.0625rem solid #000000; 
+    border-radius: 1.25rem;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, border 0.3s ease;
+}
+
+.genre__item:hover {
+  background-color: #d9b32e; /* Цвет фона при наведении */
+  color: #000000; /* Цвет текста при наведении */
+  transform: scale(1.05); /* Увеличение размера при наведении */
+  box-shadow: 0rem 0rem 0.3125rem 0.125rem #d9b32e;
+  border: none;
+}
+
+.genre__item:active {
+    transform: scale(0.95); /* Уменьшение размера при нажатии */
+}
+
+@media (min-width:1025px) and (orientation: landscape){
+.info__mobile, .mobile-social_icons, #ppb-1, #ppb-4, .mobile-menu {
+    display:none !important;
+}
+}
+/*Закрытие ПК и большие экраны (от 1366px и выше) */
+
+/* Мобильные общие (максимальная ширина экрана до 1024px) */
+@media (max-width: 1024px) and (orientation: portrait) {
+  /* Убираем стандартный стиль placeholder */
+  input::placeholder {
+    opacity: 1; /* Прозрачность */
+    font-size: 0.75rem !important;
+  }
+
+  .big-logo {
+    width: 40%;
+   }
+  .notify {
+    font-size: 0.875rem;
+  }
+  body {
+    width: 100%;
+    height: auto;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 10000;
+    display: none;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .logo {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    padding: 0.1875rem 0 0 0.625rem;
+  }
+
+  .mobile-social_icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    background: rgba(256,256,256,0.7);
+    box-shadow: 0rem 0.625rem 3.125rem -0.4375rem #5c009f;
+    padding: 0rem 0.3125rem;
+    border-radius: 3.125rem;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 9999;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .mobile-social_icons.show {
+    transition: opacity 0.4s ease-in-out;
+    opacity: 1;
+  }
+  .mobile-social_icons .icon {
+    margin: 0.375rem 0.3125rem 0rem;
+  }
+  .mobile-social_icons .icon img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s;
+  }
+  .mobile-menu {
+    width: 95% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.875rem;
+    position: fixed;
+    text-align: center;
+    background-color: #151515ba;
+    z-index: 9998;
+    border: 0.0625rem solid #fff;
+    background: linear-gradient(45deg , #000000, #5b546b, #000000);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+  }
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 auto;
+    background-color: #00ffff00;
+  }
+  .menu-item i {
+    margin-bottom: 0.3125rem;
+  }
+  .menu-item:hover {
+    color: #ffad00;
+  }
+  @keyframes gradientAnimation {
+   0% {
+     background-position: 0% 50%;
+  }
+    50% {
+     background-position: 100% 50%;
+  }
+    100% {
+      background-position: 0% 50%;
+  }
+  }
+  .content {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 4.375rem;
+  }
+  #footer, .social_icons, .menu, .ppb-12 {
+    display: none;
+  }
+  .social_icons .icon {
+    margin: 0.625rem 0;
+  }
+  .wrapper-slider {
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .slider {
+    padding: 0 !important;
+  }
+  .slick-list {
+    background: none;
+    border-radius: 0;
+    border: none;
+  }
+  .slider .slider__item {
+    padding: 0;
+    border-radius: 0.625rem;
+  }
+  .slider .slider__item .poster img {
+    width: 100% !important;
+    max-width: 100%;
+    border-radius: 0.625rem;
+    width: 100%;
+    border: none !important;
+  }
+  .slider .title, .slider .year {
+    /*visibility: hidden;*/
+    display: none;
+  }
+    .slider .rating {
+    opacity: 0;
+  }
+      .slider .slick-center .rating {
+    opacity: 1;
+    transition: opacity 0.7s ease 0.75s;
+  }
+  .info__mobile {
+    width: 100%;
+    height: auto;
+    color: white;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .title, .year, .genre {
+    padding: 0;
+  }
+  .title__mobile p, .year__mobile p {
+    transition: opacity 0.4s ease;
+        opacity: 1;
+  }
+
+  .search_form {
+    width: 95%;
+    padding: 0rem;
+    display: none;
+    margin: 0.3125rem auto;
+  }
+
+  .wrapper-form {
+    margin: 0 0rem !important;
+    width: 100% !important;
+  }
+
+  .collections {
+    width: 100%;
+    background: none;
+    padding: 0.3125rem;
+  }
+
+  .collection-name, .search-name, .collect-name, .name-mibile {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    border-bottom: 0.0625rem solid;
+    padding: 0.3125rem 0;
+  }
+
+  .nav-btn-back, .nav-btn-back-mobile {
+    width: 100%;
+    background: none;
+    padding: 0.3125rem 0.3125rem 0;
+    border-bottom: none;
+  }
+  #btn-back-mobile {
+    background: url(../img/arrows/back_2_w.svg) 0 0 / 100% no-repeat;
+    background-size: contain;
+  }
+  #search-form button {
+    padding: 0.75rem 1.25rem
+  }
+  .search-results-container, .collections-results-container, .genre-results-container {
+    width: 100%;
+    background: none;
+    padding: 0.3125rem;
+  }
+
+  .search-result-row .poster .rating, .collections-result-row .poster .rating, .genre-result-row .poster .rating {
+    /*padding: 0.4375rem;*/
+    padding: 0rem 0.3125rem;
+    border-radius: 0.3125rem;
+  }
+
+  .wrapper-slider_films, .wrapper-slider_series, .wrapper-slider_cartoon, .wrapper-slider_cartoon-series, .wrapper-slider_anime, .wrapper-slider_anime-tv-series, .wrapper-slider_tv-show {
+    width: 100% !important;
+  }
+  .slider-films .slick-list, .slider-series .slick-list, .slider-cartoon .slick-list, .slider-cartoon-series .slick-list, .slider-anime .slick-list, .slider-anime-tv-series .slick-list, .slider-tv-show .slick-list {
+    border: none !important;
+    border-radius: 0rem !important;
+    background: none;
+  }
+
+  .loader-new{
+    display: flex !important;
+    position: absolute !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-content: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    top: 50% !important;
+  }
+
+  .three{
+  padding: 0 !important;
+
+  }
+  #loader-6 span{
+  width: 2.8125rem !important;
+  height: 3.75rem !important;
+  }
+
+  .genres {
+    width: 100%;
+    background: none;
+  }
+   .genre__item {
+    font-weight: normal;
+  }
+
+   #footer, .social_icons, .menu, .ppb-12 {
+    display: none;
+  }
+  .wrapper-left, .wrapper-right, .ppb-5, .ppb-6, .ppb-7, .ppb-8, .ppb-9, .ppb-10, .ppb-11 {
+    display: none;
+  }
+}
+
+/* Портретная ориентация */
+@media (max-width: 240px) and (orientation: portrait) {
+    input::placeholder {
+    opacity: 1; /* Прозрачность */
+    font-size: 0.5rem !important;
+    }
+    .notify {
+    font-size: 0.625rem;
+   }
+     .logo img {
+    max-width: 30%;
+   }
+     .mobile-social_icons {
+    bottom: 3.4375rem;
+   }
+   .mobile-menu {
+    bottom: 0.3125rem;
+    padding: 0.3125rem 0.625rem 0.25rem;
+   }
+   .menu-item {
+    font-size: 1.125rem;
+    }
+   .menu-item span {
+    font-size: 0.5rem;
+   }
+   .slider .slider__item {
+    margin: 0.3125rem 0.625rem;
+   }
+   .name {
+    font-size: 0.5625rem !important;
+   }
+
+    .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.625rem;
+   }
+   .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.5625rem;
+   }
+   .search-results-container, .collections-results-container, .genre-results-container {
+    padding: 0rem;
+   }
+    .collections {
+    padding: 0rem;
+   }
+   .collections-row .title p{
+     font-size: 0.4375rem;
+   }
+   .collections-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+   }
+   .collect-num {
+     width: 1.5625rem;
+    height: 1.625rem;
+    font-size: 0.5rem;
+   }
+   .info__mobile {
+        font-size: 0.625rem;
+    top: 0rem;
+   }
+    .dmca-info .info-text p {
+    font-size: 0.5625rem;
+   }
+     #ppb-4 {
+    margin: 0.625rem 0;
+   }
+    .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 0.9375rem !important;
+    height: 0.9375rem !important;
+   } 
+     .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.625rem !important;
+   }
+    .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.5625rem !important;
+    }
+   .r_kp, .r_imdb {
+    font-size: 1rem;
+   }
+     #search-form button {
+     padding: 0.4375rem 1.25rem;
+    font-size: 1rem;
+     }
+    #search-input {
+    padding: 0.5rem 0.625rem !important;
+    font-size: 0.75rem;
+    }
+    .genres {
+    padding: 0.625rem;
+    gap: 0.375rem;
+   }
+     .genre__item {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.625rem;
+    }
+
+     #btn-back-mobile {
+    width: 2.1875rem;
+    height: 2.1875rem;
+   }
+     .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+   }
+
+     .dmca-info {
+    bottom: 17%;
+    width: 96%;
+    padding: 0.625rem 0.3125rem;
+    }
+   .dmca-info .dmca-logo img {
+    max-width: 30%;
+   }
+}
+@media (min-width: 241px) and  (max-width: 319px) and (orientation: portrait) {
+  .notify {
+    font-size: 0.625rem;
+  }
+  .logo img {
+    max-width: 35%;
+  }
+  .mobile-social_icons {
+    bottom: 4.375rem;
+  }
+  .mobile-menu {
+    bottom: 0.625rem;
+    padding: 0.3125rem 0.625rem 0.25rem;
+  }
+  .menu-item {
+    font-size: 1.5rem;
+  }
+  .menu-item span {
+    font-size: 0.625rem;
+  }
+  .slider .slider__item {
+    margin: 1.25rem 0.9375rem;
+  }
+  .name {
+    font-size: 0.6875rem !important;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.6875rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.625rem;
+  }
+  .search-results-container, .collections-results-container, .genre-results-container {
+    padding: 0rem;
+  }
+  .collections {
+    padding: 0rem;
+  }
+  .collections-row .title p{
+    font-size: 0.5625rem;
+  }
+  .collections-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    font-size: 0.625rem;
+  }
+  .info__mobile {
+    font-size: 0.75rem;
+    top: 1.25rem;
+  }
+  .dmca-info .info-text p {
+    font-size: 0.75rem;
+  }
+  #ppb-4 {
+    margin: 2.5rem 0 0;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 0.9375rem !important;
+    height: 0.9375rem !important;
+  } 
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.75rem !important;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.6875rem !important;
+  }
+  .r_kp, .r_imdb {
+    font-size: 1.125rem;
+  }
+  #search-input {
+    padding: 0.875rem 0.625rem !important;
+    font-size: 1rem;
+  }
+  .genres {
+    padding: 0.625rem;
+    gap: 0.375rem;
+  }
+  .genre__item {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+  }
+
+  #btn-back-mobile {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .dmca-info {
+    bottom: 12%;
+    width: 95%;
+    padding: 1.25rem 0.625rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 479px) and (orientation: portrait) {
+  .notify {
+    font-size: 0.875rem;
+  }
+  .logo img {
+    max-width: 35%;
+  }
+  .mobile-social_icons {
+    bottom: 5rem;
+  }
+  .mobile-menu {
+    bottom: 0.625rem;
+    padding: 0.3125rem 0.625rem 0.25rem;
+  }
+  .menu-item {
+    font-size: 1.5625rem;
+  }
+  .menu-item span {
+    font-size: 0.625rem;
+  }
+  .slider .slider__item {
+    margin: 1.25rem 1.0625rem;
+  }
+  .name {
+    font-size: 0.75rem !important;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.8125rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.8125rem;
+  }
+  .search-results-container, .collections-results-container, .genre-results-container {
+    padding: 0rem;
+  }
+  .collections {
+    padding: 0rem;
+  }
+  .collections-row .title p{
+    font-size: 0.75rem;
+  }
+  .collections-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.75rem;
+  }
+  .info__mobile {
+    font-size: 0.875rem;
+    top: 0.625rem;
+  }
+  .dmca-info .info-text p {
+    font-size: 1rem;
+  }
+  #ppb-4 {
+    margin: 1.875rem 0 0;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 0.9375rem !important;
+    height: 0.9375rem !important;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.75rem !important;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.6875rem !important;
+  }
+  .r_kp, .r_imdb {
+    font-size: 1rem;
+  }
+  #search-input {
+    padding: 0.875rem 0.625rem !important;
+    font-size: 1rem;
+  }
+  .genres {
+    padding: 0.625rem;
+    gap: 0.375rem;
+  }
+  .genre__item {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.75rem;
+  }
+
+  #btn-back-mobile {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .dmca-info {
+    bottom: 12%;
+    width: 95%;
+    padding: 1.25rem 0.625rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 539px) and (orientation: portrait) {
+  .notify {
+    font-size: 0.9375rem;
+  }
+  .logo img {
+    max-width: 35%;
+  }
+  .mobile-social_icons {
+    bottom: 5.3125rem;
+  }
+  .mobile-menu {
+    bottom: 0.625rem;
+    padding: 0.3125rem 0.625rem 0.25rem;
+  }
+  .menu-item {
+    font-size: 2rem;
+  }
+  .menu-item span {
+    font-size: 0.9375rem;
+  }
+  .slider .slider__item {
+    margin: 1.25rem 0.9375rem;
+  }
+  .name {
+    font-size: 1rem !important;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.8125rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.8125rem;
+  }
+  .search-results-container, .collections-results-container, .genre-results-container {
+    padding: 0rem;
+  }
+  .collections {
+    padding: 0rem;
+  }
+  .collections-row .title p{
+    font-size: 0.875rem;
+  }
+  .collections-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.75rem;
+  }
+  .info__mobile {
+    font-size: 0.875rem;
+    top: -2.8125rem;
+  }
+  .dmca-info .info-text p {
+    font-size: 1rem;
+  }
+  #ppb-4 {
+    margin: -1.875rem 0 0;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 0.9375rem !important;
+    height: 0.9375rem !important;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.75rem !important;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.6875rem !important;
+  }
+  .r_kp, .r_imdb {
+    font-size: 1.25rem;
+  }
+  #search-input {
+    padding: 0.875rem 0.625rem !important;
+    font-size: 1rem;
+  }
+  .genres {
+    padding: 0.625rem;
+    gap: 0.375rem;
+  }
+  .genre__item {
+    padding: 0.25rem 0.625rem;
+    font-size: 1.125rem;
+  }
+
+  #btn-back-mobile {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .dmca-info {
+    bottom: 12%;
+    width: 95%;
+    padding: 1.25rem 0.625rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 767px) and (orientation: portrait) {
+  input::placeholder {
+    opacity: 1; /* Прозрачность */
+    font-size: 0.875rem !important;
+  }
+  .notify {
+    font-size: 0.9375rem;
+  }
+  .logo img {
+    max-width: 30%;
+  }
+  .mobile-social_icons {
+    width: 80%;
+    bottom: 5.3125rem;
+  }
+  .mobile-menu {
+    width: 80% !important;
+    bottom: 0.625rem;
+    padding: 0.3125rem 0.625rem 0.25rem;
+  }
+  .menu-item {
+    font-size: 2rem;
+  }
+  .menu-item span {
+    font-size: 0.9375rem;
+  }
+  .slider .slider__item {
+    margin: 1.5625rem 1.25rem;
+  }
+  .name {
+    font-size: 1.125rem !important;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.8125rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.8125rem;
+  }
+  .search-results-container, .collections-results-container, .genre-results-container {
+    padding: 0rem;
+  }
+  .collections {
+    padding: 0rem;
+  }
+  .collections-row .title p{
+    font-size: 0.75rem;
+  }
+  .collections-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.75rem;
+  }
+  .info__mobile {
+    font-size: 1rem;
+    top: 1.875rem;
+  }
+  .dmca-info .info-text p {
+    font-size: 1.125rem;
+  }
+  #ppb-4 {
+    margin: 3.125rem 0 0;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 1.25rem !important;
+    height: 1.25rem !important;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.75rem !important;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.6875rem !important;
+  }
+  .r_kp, .r_imdb {
+    font-size: 1.25rem;
+  }
+  #search-input {
+        padding: 0.75rem 0.625rem !important;
+    font-size: 1.125rem;
+  }
+  .genres {
+    padding: 0.625rem;
+    gap: 0.375rem;
+  }
+  .genre__item {
+    padding: 0.25rem 0.625rem;
+    font-size: 1.25rem;
+  }
+
+  #btn-back-mobile {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .dmca-info {
+    bottom: 12%;
+    width: 95%;
+    padding: 1.25rem 0.625rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+  input::placeholder {
+    opacity: 1; /* Прозрачность */
+    font-size: 1.5rem !important;
+  }
+  .content {
+    margin-bottom: 6.25rem;
+  }
+  .notify {
+    font-size: 1.25rem;
+  }
+  .logo img {
+    max-width: 25%;
+  }
+  .mobile-social_icons {
+    width: 70%;
+    bottom: 6.875rem;
+  }
+  .mobile-menu {
+        width: 75% !important;
+    bottom: 0.625rem;
+    padding: 0.625rem 1.25rem 0.25rem;
+        border-radius: 2.8125rem;
+  }
+  .menu-item {
+    font-size: 2.8125rem;
+  }
+  .menu-item span {
+    font-size: 1.375rem;
+  }
+  .slider .slider__item {
+        margin: 2.8125rem 1.5625rem;
+  }
+  .name {
+    font-size: 1.75rem !important;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 1.25rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 1.1875rem;
+  }
+  .search-results-container, .collections-results-container, .genre-results-container {
+    padding: 0rem;
+  }
+  .collections {
+    padding: 0rem;
+  }
+  .collections-row .title p{
+    font-size: 1.0625rem;
+  }
+  .collections-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+        width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1.25rem;
+  }
+  .info__mobile {
+    font-size: 1.5rem;
+    top: 0.625rem;
+  }
+  .dmca-info .info-text p {
+    font-size: 1.625rem;
+  }
+  #ppb-4 {
+    margin: 2.5rem 0 0;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 1.875rem !important;
+    height: 1.875rem !important;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 1.25rem !important;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 1.1875rem !important;
+  }
+  .search-result-row .poster .rating, .collections-result-row .poster .rating, .genre-result-row .poster .rating {
+    padding: 0rem 0.625rem;
+  }
+  .r_kp, .r_imdb {
+    font-size: 1.875rem;
+  }
+  #search-input {
+        padding: 1.1875rem 0.625rem !important;
+    font-size: 1.75rem;
+  }
+  #search-form button {
+    padding: 1.0625rem 1.875rem;
+        font-size: 2.1875rem;
+  }
+  .genres {
+    padding: 0.625rem;
+    gap: 0.5rem;
+  }
+  .genre__item {
+        padding: 0.25rem 1rem;
+    font-size: 2rem;
+  }
+
+  #btn-back-mobile {
+        width: 5rem;
+    height: 5rem;
+  }
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .dmca-info {
+    bottom: 12%;
+    width: 95%;
+        padding: 1.875rem 1.3125rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1365px) and (orientation: portrait) {
+  input::placeholder {
+    opacity: 1; /* Прозрачность */
+    font-size: 1.75rem !important;
+  }
+  .content {
+    margin-bottom: 6.25rem;
+  }
+  .notify {
+    font-size: 1.5rem;
+  }
+  .logo img {
+    max-width: 25%;
+  }
+  .mobile-social_icons {
+    width: 70%;
+    bottom: 7.5rem;
+  }
+  .mobile-menu {
+        width: 70% !important;
+    bottom: 0.625rem;
+    padding: 0.625rem 1.25rem 0.25rem;
+        border-radius: 3.125rem;
+  }
+  .menu-item {
+    font-size: 3.125rem;
+  }
+  .menu-item span {
+    font-size: 1.5rem;
+  }
+  .slider .slider__item {
+        margin: 3.125rem 1.875rem;
+  }
+  .name {
+    font-size: 2rem !important;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 1.5rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 1.4375rem;
+  }
+  .search-results-container, .collections-results-container, .genre-results-container {
+    padding: 0rem;
+  }
+  .collections {
+    padding: 0rem;
+  }
+  .collections-row .title p{
+    font-size: 1.4375rem;
+  }
+  .collections-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+    width: 4.375rem;
+    height: 4.375rem;
+    font-size: 1.375rem;
+  }
+  .info__mobile {
+    font-size: 1.75rem;
+    top: 1.875rem;
+  }
+  .dmca-info .info-text p {
+    font-size: 2.125rem;
+  }
+  #ppb-4 {
+    /*top: 3.125rem;*/
+        margin: 3.75rem;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 1.3125rem !important;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 1.25rem !important;
+  }
+  .search-result-row .poster .rating, .collections-result-row .poster .rating, .genre-result-row .poster .rating {
+    padding: 0rem 0.625rem;
+  }
+  .r_kp, .r_imdb {
+    font-size: 2.25rem;
+  }
+  #search-input {
+        padding: 1.1875rem 0.625rem !important;
+    font-size: 2.125rem;
+  }
+  #search-form button {
+    padding: 1.0625rem 2.5rem;
+        font-size: 2.6875rem;
+  }
+  .genres {
+    padding: 0.625rem;
+    gap: 1.625rem;
+    margin-top: 1.875rem;
+  }
+  .genre__item {
+        padding: 0.25rem 1.125rem;
+    font-size: 2.125rem;
+  }
+
+  #btn-back-mobile {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .dmca-info {
+    bottom: 12%;
+    width: 95%;
+        padding: 1.875rem 1.3125rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 45%;
+  }
+}
+
+
+/* Альбомная ориентация */
+@media (max-width: 319px) and (orientation: landscape) {
+  .notify {
+    font-size: 1.125rem;
+  }
+  #loader-6 span {
+    width: 2.5rem;
+    height: 5rem;
+  }
+  #btn-back {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .icon {
+    margin: 0.3125rem 0;
+  }
+  .icon img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  .logo img {
+    max-width: 16%;
+  }
+  .ppb-12, #ppb-5 {
+    width: 8.5%;
+    margin: 0;
+  }
+  .ppb-12 {
+    top: 95%;
+  }
+
+  .logo {
+    padding: 0.3125rem 0 0 1.875rem;
+   }
+    .social_icons {
+    padding: 0rem 0.25rem;
+   }
+  .icon img {
+        width: 0.9375rem;
+    height: 0.9375rem;
+    }
+   #search-input {
+    padding: 0.66875rem !important;
+        font-size: 0.75rem;
+   }
+    #search-form button {
+    padding: 0.4375rem 0.9375rem;
+   }
+   .name {
+    font-size: 0.625rem;
+   }
+   .menu button {
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.5625rem;
+        border-radius: 0.625rem 0.625rem 0rem 0rem;
+  }
+   #btn-collections span {
+    font-size: 0.5625rem;
+    margin-right: -0.1875rem;
+  }
+  .r_kp, .r_imdb {
+    font-size: 0.75rem;
+  }
+  .title, .year {
+    font-size: 0.5625rem;
+  }
+  .genres {
+    width: 90%;
+    padding: 0.9375rem 1.25rem;
+    gap: 0.25rem;
+  }
+  .slider__item {
+    padding: 0rem 0.3125rem;
+  }
+   .slider-films__item, .slider-series__item, .slider-cartoon__item, .slider-cartoon-series__item, .slider-anime__item, .slider-anime-tv-series__item, .slider-tv-show__item {
+    padding: 0rem 0.3125rem;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.5rem;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.4375rem;
+  }
+  .dmca-info {
+    width: 80%;
+        bottom: 15%;
+  }
+  .dmca-info .info-text p {
+    font-size: 1rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 35%;
+  }
+  .big-logo {
+    width: 30%;
+   }
+   .wrapper-form {
+    width: 80%;
+  }
+   .search_form {
+    padding: 1.25rem 0 0;
+  }
+
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.5625rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.5rem;
+  }
+  .nav-btn-back, .nav-btn-back-mobile {
+    padding: 0 0.3125rem;
+  }
+  .collections-row .title p {
+    font-size: 0.4375rem;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.625rem;
+   }
+  .collections-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+   }
+   .collect-num {
+        width: 1.5625rem;
+    height: 1.5625rem;
+    font-size: 0.5rem;
+   }
+    .genre__item {
+    font-size: 0.5rem;
+   }
+   .tg-bot {
+    margin-left: 0.625rem;
+    }
+  .container {
+    font-size: 0.3125rem;
+     width: 100%;
+   }
+  .footer-menu li {
+    margin-left: 0.25rem;
+   }
+  .info__mobile, .mobile-social_icons, #ppb-1, #ppb-4, .mobile-menu {
+    display:none !important;
+   }
+  .container {
+    padding: 0.625rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 479px) and (orientation: landscape) {
+  .notify {
+    font-size: 1.125rem;
+  }
+  #loader-6 span {
+    width: 2.5rem;
+    height: 5rem;
+  }
+  #btn-back {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .icon {
+    margin: 0.3125rem 0;
+  }
+  .icon img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  .logo img {
+    max-width: 16%;
+  }
+  .ppb-12, #ppb-5 {
+    width: 8.5%;
+    margin: 0;
+  }
+  .ppb-12 {
+    top: 95%;
+  }
+
+  .logo {
+    padding: 0.3125rem 0 0 1.875rem;
+   }
+    .social_icons {
+    padding: 0rem 0.25rem;
+   }
+  .icon img {
+        width: 0.9375rem;
+    height: 0.9375rem;
+    }
+   #search-input {
+    padding: 0.66875rem !important;
+        font-size: 0.75rem;
+   }
+    #search-form button {
+    padding: 0.4375rem 0.9375rem;
+   }
+   .name {
+    font-size: 0.625rem;
+   }
+   .menu button {
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.5625rem;
+        border-radius: 0.625rem 0.625rem 0rem 0rem;
+  }
+   #btn-collections span {
+    font-size: 0.5625rem;
+    margin-right: -0.1875rem;
+  }
+  .r_kp, .r_imdb {
+    font-size: 0.75rem;
+  }
+  .title, .year {
+    font-size: 0.5625rem;
+  }
+  .genres {
+    width: 90%;
+    padding: 0.9375rem 1.25rem;
+    gap: 0.25rem;
+  }
+  .slider__item {
+    padding: 0rem 0.3125rem;
+  }
+   .slider-films__item, .slider-series__item, .slider-cartoon__item, .slider-cartoon-series__item, .slider-anime__item, .slider-anime-tv-series__item, .slider-tv-show__item {
+    padding: 0rem 0.3125rem;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.5rem;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.4375rem;
+  }
+  .dmca-info {
+    width: 80%;
+        bottom: 15%;
+  }
+  .dmca-info .info-text p {
+    font-size: 1rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 35%;
+  }
+  .big-logo {
+    width: 30%;
+   }
+   .wrapper-form {
+    width: 80%;
+  }
+   .search_form {
+    padding: 1.25rem 0 0;
+  }
+
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.5625rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.5rem;
+  }
+  .nav-btn-back, .nav-btn-back-mobile {
+    padding: 0 0.3125rem;
+  }
+  .collections-row .title p {
+    font-size: 0.4375rem;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.625rem;
+   }
+  .collections-row {
+    width: calc(50% - 0.625rem);
+    margin: 0.3125rem;
+   }
+   .collect-num {
+        width: 1.5625rem;
+    height: 1.5625rem;
+    font-size: 0.5rem;
+   }
+    .genre__item {
+    font-size: 0.5rem;
+   }
+   .tg-bot {
+    margin-left: 0.625rem;
+    }
+  .container {
+    font-size: 0.3125rem;
+     width: 100%;
+   }
+  .footer-menu li {
+    margin-left: 0.25rem;
+   }
+  .info__mobile, .mobile-social_icons, #ppb-1, #ppb-4, .mobile-menu {
+    display:none !important;
+   }
+  .container {
+    padding: 0.625rem;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 639px) and (orientation: landscape) {
+  .notify {
+    font-size: 1.125rem;
+  }
+  #loader-6 span {
+    width: 2.5rem;
+    height: 5rem;
+  }
+  #btn-back {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .icon {
+    margin: 0.3125rem 0;
+  }
+  .icon img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  .logo img {
+    max-width: 16%;
+  }
+  .ppb-12, #ppb-5 {
+    width: 8.5%;
+  }
+  .logo {
+    padding: 0.3125rem 0 0 1.875rem;
+  }
+  .icon img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .name {
+    font-size: 0.75rem;
+  }
+  .menu button {
+    padding: 0.3125rem 1.25rem;
+    font-size: 0.875rem;
+  }
+   #btn-collections span {
+    font-size: 1rem;
+  }
+  .r_kp, .r_imdb {
+    font-size: 0.75rem;
+  }
+  .title, .year {
+    font-size: 0.6875rem;
+  }
+  .genres {
+    width: 90%;
+    padding: 0.9375rem 1.25rem;
+    gap: 0.25rem;
+  }
+  .slider__item {
+    padding: 0rem 0.3125rem;
+  }
+   .slider-films__item, .slider-series__item, .slider-cartoon__item, .slider-cartoon-series__item, .slider-anime__item, .slider-anime-tv-series__item, .slider-tv-show__item {
+    padding: 0rem 0.3125rem;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.6875rem;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.625rem;
+  }
+  .dmca-info {
+    width: 80%;
+        bottom: 15%;
+  }
+  .dmca-info .info-text p {
+    font-size: 1rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 35%;
+  }
+  .big-logo {
+    width: 30%;
+   }
+   .wrapper-form {
+    width: 80%;
+  }
+   .search_form {
+    padding: 1.25rem 0 0;
+  }
+
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.5625rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.5rem;
+  }
+  .nav-btn-back, .nav-btn-back-mobile {
+    padding: 0 0.3125rem;
+  }
+  .collections-row .title p {
+    font-size: 0.4375rem;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.625rem;
+  }
+  .collections-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+        width: 1.5625rem;
+    height: 1.5625rem;
+    font-size: 0.5rem;
+  }
+ .genre__item {
+    font-size: 0.625rem;
+   }
+  .container {
+    font-size: 0.4375rem;
+     width: 100%;
+  }
+  .footer-menu li {
+    margin-left: 0.625rem;
+  }
+  .info__mobile, .mobile-social_icons, #ppb-1, #ppb-4, .mobile-menu {
+    display:none !important;
+  }
+  .container {
+    padding: 0.625rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 719px) and (orientation: landscape) {
+  .notify {
+    font-size: 1.125rem;
+  }
+  #loader-6 span {
+    width: 2.5rem;
+    height: 5rem;
+  }
+  #btn-back {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .icon {
+    margin: 0.3125rem 0;
+  }
+  .icon img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  .logo img {
+    max-width: 16%;
+  }
+  .ppb-12, #ppb-5 {
+    width: 8.5%;
+  }
+  .logo {
+    padding: 0.3125rem 0 0 1.875rem;
+  }
+  .icon img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .name {
+    font-size: 0.75rem;
+  }
+  .menu button {
+    padding: 0.3125rem 1.25rem;
+    font-size: 0.875rem;
+  }
+   #btn-collections span {
+    font-size: 1rem;
+  }
+  .r_kp, .r_imdb {
+    font-size: 0.75rem;
+  }
+  .title, .year {
+    font-size: 0.6875rem;
+  }
+  .genres {
+    width: 90%;
+    padding: 0.9375rem 1.25rem;
+    gap: 0.25rem;
+  }
+  .slider__item {
+    padding: 0rem 0.3125rem;
+  }
+   .slider-films__item, .slider-series__item, .slider-cartoon__item, .slider-cartoon-series__item, .slider-anime__item, .slider-anime-tv-series__item, .slider-tv-show__item {
+    padding: 0rem 0.3125rem;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.6875rem;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.625rem;
+  }
+  .dmca-info {
+    width: 80%;
+        bottom: 15%;
+  }
+  .dmca-info .info-text p {
+    font-size: 1rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 35%;
+  }
+  .big-logo {
+    width: 30%;
+   }
+   .wrapper-form {
+    width: 80%;
+  }
+   .search_form {
+    padding: 1.25rem 0 0;
+  }
+
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.6875rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.625rem;
+  }
+  .nav-btn-back, .nav-btn-back-mobile {
+    padding: 0 0.3125rem;
+  }
+  .collections-row .title p {
+    font-size: 0.625rem;
+  }
+  .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.625rem;
+  }
+  .collections-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+  width: 1.875rem;
+    height: 1.875rem;
+    font-size: 0.625rem;
+  }
+ .genre__item {
+    font-size: 0.75rem;
+   }
+  .container {
+    font-size: 0.625rem;
+     width: 100%;
+  }
+  .footer-menu li {
+    margin-left: 0.625rem;
+  }
+  .info__mobile, .mobile-social_icons, #ppb-1, #ppb-4, .mobile-menu {
+    display:none !important;
+  }
+  .container {
+    padding: 0.625rem;
+  }
+}
+
+@media (min-width: 720px) and (max-width: 1023px) and (orientation: landscape) {
+  #loader-6 span {
+    width: 2.5rem;
+    height: 5rem;
+  }
+  #btn-back {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .icon {
+    margin: 0.3125rem 0;
+  }
+  .icon img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  .logo img {
+    max-width: 16%;
+  }
+  .ppb-12, #ppb-5 {
+    width: 8.5%;
+  }
+  .logo {
+    padding: 0.3125rem 0 0 1.875rem;
+  }
+  .icon img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .menu button {
+    padding: 0.3125rem 1.25rem;
+    font-size: 0.875rem;
+  }
+   #btn-collections span {
+    font-size: 1rem;
+  }
+  .r_kp, .r_imdb {
+    font-size: 1rem;
+  }
+  .title, .year {
+    font-size: 0.6875rem;
+  }
+  .genres {
+    width: 90%;
+    padding: 1.25rem 3.4375rem;
+  }
+  .slider__item {
+    padding: 0rem 0.3125rem;
+  }
+   .slider-films__item, .slider-series__item, .slider-cartoon__item, .slider-cartoon-series__item, .slider-anime__item, .slider-anime-tv-series__item, .slider-tv-show__item {
+    padding: 0rem 0.3125rem;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.6875rem;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.625rem;
+  }
+  .dmca-info {
+    width: 80%;
+        bottom: 15%;
+  }
+  .dmca-info .info-text p {
+    font-size: 1rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 35%;
+  }
+  .big-logo {
+    width: 30%;
+   }
+   .wrapper-form {
+    width: 80%;
+  }
+   .search_form {
+    padding: 1.25rem 0 0;
+  }
+
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  /*  .search-result-row p, .collections-result-row p, .genre-result-row p {
+    font-size: 0.75rem;
+  }*/
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.6875rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.625rem;
+  }
+  .nav-btn-back, .nav-btn-back-mobile {
+    padding: 0 0.3125rem;
+  }
+  .collections-row .title p {
+    font-size: 0.75rem;
+  }
+
+  .collections-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    font-size: 0.6875rem;
+  }
+ .genre__item {
+    font-size: 1rem;
+   }
+  .container {
+    font-size: 0.625rem;
+     width: 100%;
+  }
+  .footer-menu li {
+    margin-left: 0.625rem;
+  }
+  .info__mobile, .mobile-social_icons, #ppb-1, #ppb-4, .mobile-menu {
+    display:none !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+  #loader-6 span {
+    width: 2.5rem;
+    height: 5rem;
+  }
+  #btn-back {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+  .icon {
+    margin: 0.3125rem 0;
+  }
+  .icon img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  .logo img {
+    max-width: 16%;
+  }
+  .ppb-12, #ppb-5 {
+    width: 8.5%;
+  }
+  .logo {
+    padding: 0.3125rem 0 0 1.875rem;
+  }
+  .icon img {
+    width: 2.1875rem;
+    height: 2.1875rem;
+  }
+  .name {
+    font-size: 1.375rem;
+  }
+  .menu button {
+    padding: 0.3125rem 1.25rem;
+    font-size: 1.375rem;
+  }
+   #btn-collections span {
+    font-size: 1.375rem;
+  }
+  .r_kp, .r_imdb {
+    font-size: 1.375rem;
+  }
+  .title, .year {
+    font-size: 0.8125rem;
+  }
+  .genres {
+    width: 90%;
+    padding: 1.25rem 3.4375rem;
+  }
+  .slider__item {
+    padding: 0rem 0.3125rem;
+  }
+   .slider-films__item, .slider-series__item, .slider-cartoon__item, .slider-cartoon-series__item, .slider-anime__item, .slider-anime-tv-series__item, .slider-tv-show__item {
+    padding: 0rem 0.3125rem;
+  }
+  .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 0.9375rem;
+  }
+  .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 0.875rem;
+  }
+  .dmca-info {
+    width: 80%;
+        bottom: 15%;
+  }
+  .dmca-info .info-text p {
+    font-size: 1.375rem;
+  }
+  .dmca-info .dmca-logo img {
+    max-width: 35%;
+  }
+  .big-logo {
+    width: 30%;
+   }
+   .wrapper-form {
+    width: 80%;
+  }
+   .search_form {
+    padding: 1.25rem 0 0;
+  }
+
+  .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(25% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  /*  .search-result-row p, .collections-result-row p, .genre-result-row p {
+    font-size: 0.75rem;
+  }*/
+  .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 0.8125rem;
+  }
+  .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 0.75rem;
+  }
+  .nav-btn-back, .nav-btn-back-mobile {
+    padding: 0 0.3125rem;
+  }
+  .collections-row .title p {
+    font-size: 1.125rem;
+  }
+
+  .collections-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+  }
+  .collect-num {
+    width: 3.125rem;
+    height: 3.125rem;
+    font-size: 1rem;
+  }
+ .genre__item {
+    font-size: 1.25rem;
+   }
+  .container {
+    font-size: 0.9375rem;
+     width: 100%;
+  }
+  .footer-menu li {
+    margin-left: 0.625rem;
+  }
+  .info__mobile, .mobile-social_icons, #ppb-1, #ppb-4, .mobile-menu {
+    display:none !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1366px) and (orientation: landscape) {
+    input::placeholder {
+    opacity: 1; /* Прозрачность */
+    font-size: 1.5rem !important;
+    }
+   #loader-6 span {
+    width: 2.5rem;
+    height: 5rem;
+   }
+   #btn-back {
+    width: 3.75rem;
+    height: 3.75rem;
+    }
+   .icon {
+    margin: 0.3125rem 0;
+   }
+   .icon img {
+    width: 1.5625rem;
+    height: 1.5625rem;
+   }
+   .logo img {
+    max-width: 16%;
+   }
+   .ppb-12, #ppb-5 {
+    width: 8.5%;
+    }
+   .logo {
+    padding: 0.3125rem 0 0 1.875rem;
+   }
+    .icon img {
+    width: 3.4375rem;
+    height: 3.4375rem;
+   }
+   .name {
+    font-size: 1.875rem;
+   }
+   .menu button {
+    padding: 0.3125rem 1.25rem;
+    font-size: 2rem;
+    }
+    #btn-collections span {
+    font-size: 2rem;
+    }
+    .r_kp, .r_imdb {
+    font-size: 2rem;
+   }
+    .title, .year {
+    font-size: 1.125rem;
+   }
+   .genres {
+    width: 90%;
+    padding: 1.25rem 3.4375rem;
+   }
+    .slider__item {
+    padding: 0rem 0.3125rem;
+   }
+    .slider-films__item, .slider-series__item, .slider-cartoon__item, .slider-cartoon-series__item, .slider-anime__item, .slider-anime-tv-series__item, .slider-tv-show__item {
+    padding: 0rem 0.3125rem;
+   }
+   .slider-films__item .title, .slider-films__item .year, .slider-series__item .title, .slider-series__item .year, .slider-cartoon__item .title, .slider-cartoon__item .year, .slider-cartoon-series__item .title, .slider-cartoon-series__item .year, .slider-anime__item .title, .slider-anime__item .year, .slider-anime-tv-series__item .title, .slider-anime-tv-series__item .year, .slider-tv-show__item .title, .slider-tv-show__item .year {
+    font-size: 1.25rem;
+    }
+    .slider-films__item .genre, .slider-series__item .genre, .slider-cartoon__item .genre, .slider-cartoon-series__item .genre, .slider-anime__item .genre, .slider-anime-tv-series__item .genre, .slider-tv-show__item .genre {
+    font-size: 1.1875rem;
+    }
+    .slider_name_nav img, .collection-name img, .collect-name img, .name-mibile img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.625rem;
+    }
+   .dmca-info {
+    width: 80%;
+        bottom: 15%;
+   }
+    .dmca-info .info-text p {
+    font-size: 1.375rem;
+    }
+   .dmca-info .dmca-logo img {
+    max-width: 35%;
+   }
+   .big-logo {
+    width: 30%;
+   }
+    .wrapper-form {
+    width: 80%;
+   }
+   .search_form {
+    padding: 1.25rem 0 0;
+   }
+    #search-input {
+    font-size: 2rem;
+   }
+     #search-form button {
+    padding: 0.75rem 2.1875rem;
+    font-size: 2.3125rem;
+    }
+     .search-result-row, .collections-result-row, .genre-result-row {
+    width: calc(25% - 0.625rem);
+    margin: 0.3125rem;
+   }
+
+    .search-result-row .title p, .search-result-row .year p, .collections-result-row .title p, .collections-result-row .year p, .genre-result-row .title p, .genre-result-row .year p {
+    font-size: 1.25rem;
+    }
+     .search-result-row .genre p, .collections-result-row .genre p, .genre-result-row .genre p {
+    font-size: 1.1875rem;
+    }
+     .nav-btn-back, .nav-btn-back-mobile {
+    padding: 0 0.3125rem;
+   }
+     .collections-row .title p {
+    font-size: 1.5rem;
+    }
+
+   .collections-row {
+    width: calc(33.33% - 0.625rem);
+    margin: 0.3125rem;
+    }
+    .collect-num {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    font-size: 1.375rem;
+    }
+     .genre__item {
+    font-size: 2rem;
+   }
+     .container {
+    font-size: 1.3125rem;
+     width: 100%;
+   }
+    .footer-menu li {
+    margin-left: 0.9375rem;
+   }
+     .info__mobile, .mobile-social_icons, #ppb-1, #ppb-4, .mobile-menu {
+    display:none !important;
+   }
+}
