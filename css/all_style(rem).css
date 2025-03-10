@@ -404,6 +404,7 @@ position: relative;
     font-weight: bold;
     }
 .r_kp, .r_imdb {
+    font-family: 'Days One', arial;
     font-size: 1.625rem;
     /*font-weight: 900;*/
     color: white;
@@ -792,6 +793,7 @@ input::placeholder {
 }
 
 .firstLoader {
+    font-family: 'Days One', arial;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1106,8 +1108,9 @@ margin-left: 0.3125rem;
     margin-right: 0.625rem;
 }
 .name {
+    font-family: 'Days One', arial;
   font-size: 1.5rem;
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 
 .arrows_films, .arrows_series, .arrows_cartoon, .arrows_cartoon-series, .arrows_anime, .arrows_anime-tv-series, .arrows_tv-show {
@@ -1356,6 +1359,7 @@ margin-left: 0.3125rem;
 }
 
 .genre__item {
+    font-family: 'Days One', arial;
    padding: 0rem 1.25rem 0.25rem;
     padding: 0.25rem 0.9375rem;
     background-color: #484848;
@@ -1572,7 +1576,11 @@ margin-left: 0.3125rem;
   .title__mobile p, .year__mobile p {
     transition: opacity 0.4s ease;
         opacity: 1;
+        font-weight: bold;
   }
+/*    .title__mobile p {
+    font-weight: bold;
+  }*/
 
   .search_form {
     width: 95%;
@@ -1944,7 +1952,8 @@ margin-left: 0.3125rem;
   }
   .info__mobile {
     font-size: 0.875rem;
-    top: 0.625rem;
+    /*top: 0.625rem;*/
+    top: 0.125rem;
   }
   .dmca-info .info-text p {
     font-size: 1rem;
@@ -3291,7 +3300,7 @@ margin-left: 0.3125rem;
   }
 }
 
-@media (min-width: 1280px) and (max-width: 1366px) and (orientation: landscape) {
+@media (min-width: 1280px) and (max-width: 1365px) and (orientation: landscape) {
     input::placeholder {
     opacity: 1; /* Прозрачность */
     font-size: 1.5rem !important;
