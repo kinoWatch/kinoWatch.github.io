@@ -32,5 +32,11 @@
       "type": "image/png"
     }
   ],
-  "splashscreens": false
+  "splash_screens": [
+    {
+      "src": "/img/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
 }
