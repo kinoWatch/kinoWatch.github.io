@@ -1,11 +1,9 @@
-﻿{
+{
   "name": "KinoWatch",
   "short_name": "KinoWatch",
   "display": "standalone",
-  "mode": "minimal-ui",
   "start_url": "/",
   "background_color": "#0f0f0f",
-  "splashscreens": [],
   "icons": [
     {
       "src": "/img/favicon/android-chrome-192x192.png",
@@ -30,6 +28,13 @@
     {
       "src": "/img/favicon/favicon-32x32.png",
       "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "splash_screens": [
+    {
+      "src": "/img/favicon/android-chrome-192x192.png",
+      "sizes": "192x19",
       "type": "image/png"
     }
   ]
