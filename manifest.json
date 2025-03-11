@@ -4,6 +4,8 @@
   "display": "standalone",
   "mode": "minimal-ui",
   "start_url": "/",
+  "background_color": "#0f0f0f",
+  "splashscreens": []
   "icons": [
     {
       "src": "/img/favicon/android-chrome-192x192.png",
